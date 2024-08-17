@@ -7,6 +7,8 @@ CPP-BRAIN library consists modules of 'swt::CPPBrain', 'swt::CPPBrainx' and 'swt
 # Example 1:
 Use:
 ```cpp
+#include "CPP-BRAIN/cppbrain.h"
+
 Shanghai* city1 = new Shanghai;
 // This line
 swt::CPPBrainx<Shanghai*>::release(city1);
