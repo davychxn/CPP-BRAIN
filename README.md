@@ -1,4 +1,4 @@
-#CPP-BRAIN provides straightforward APIs to make your C++ coding easier
+# CPP-BRAIN provides straightforward APIs to make your C++ coding easier
 
 CPP-BRAIN library consists modules of 'swt::CPPBrain', 'swt::CPPBrainx' and 'swt::CPPBrainxx'
 
@@ -7,7 +7,7 @@ CPP-BRAIN library consists modules of 'swt::CPPBrain', 'swt::CPPBrainx' and 'swt
 -In the hot weather of Guangzhou
 
 Some examples:
-#Example 1:
+# Example 1:
 Use:
 ```cpp
 Shanghai* city1 = new Shanghai;
@@ -36,7 +36,7 @@ if (citys)
     citys = nullptr;
 }
 ```
-#Example 2:
+# Example 2:
 Use:
 ```cpp
 int i = 5;
@@ -52,7 +52,7 @@ for (int i = 0; i < 5; i++)
     // Do something 5 times
 }
 ```
-#Example 3:
+# Example 3:
 Use:
 ```cpp
 const char* names = "Taylor Swift,Vivian Chow,Pace Wu,Gina Jin,,Jasmine Sun,Sophia Lu,En Chin,Cindy Fei Mok";
@@ -71,7 +71,7 @@ Instead of:
 ```cpp
 // You can imagine
 ```
-#Example 4:
+# Example 4:
 Use:
 ```cpp
 std::set<int> list1 = { 2024, 2025, 2026, 2027, 2028 };
@@ -83,7 +83,7 @@ Instead of:
 // You can imagine
 ```
 
-#Documents
+# Documents
 Please use the following code to check the Help documents:
 ```cpp
 swt::CPPBrain::help();
@@ -91,9 +91,9 @@ swt::CPPBrainx<int>::help();
 swt::CPPBrainxx<int, int>::help();
 ```
 
-#Examples
+# Examples
 Check:
 `examples\Examples.cpp`
 
-#Tested
+# Tested
 1. Windows 11 & Visual Studio C++ 2022
