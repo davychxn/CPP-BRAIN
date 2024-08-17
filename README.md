@@ -76,7 +76,7 @@ Instead of:
 # Example 4:
 Use:
 ```cpp
-std::set<int> list1 = { 2024, 2025, 2026, 2027, 2028 };
+std::list<int> list1 = { 2024, 2025, 2026, 2027, 2028 };
 // Left: 2024, 2026, 2028
 swt::CPPBrainx<int>::delete_elements_by_indices(list1, { 1, 3 });
 ```
