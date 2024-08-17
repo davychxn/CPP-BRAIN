@@ -94,7 +94,7 @@ swt::CPPBrainx<int>::help();
 swt::CPPBrainxx<int, int>::help();
 ```
 
-# Examples
+# More examples, more APIs
 Check:
 ```
 examples\Examples.cpp
