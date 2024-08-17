@@ -1,6 +1,6 @@
-# CPP-BRAIN provides straightforward APIs to make your C++ coding easier
+# CPP-BRAIN: Convenient APIs to make your life longer
 
-CPP-BRAIN library consists modules of 'swt::CPPBrain', 'swt::CPPBrainx' and 'swt::CPPBrainxx'
+CPP-BRAIN C++ library consists modules of 'swt::CPPBrain', 'swt::CPPBrainx' and 'swt::CPPBrainxx'
 
 -Created by Davy Chen, Since August 8th, 2020, In the hot weather of Guangzhou
 
