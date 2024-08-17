@@ -4,7 +4,7 @@ CPP-BRAIN C++ library consists of modules of `swt::CPPBrain`, `swt::CPPBrainx` a
 
 -Created by Davy Chen, Since August 8th, 2020, In the hot weather of Guangzhou
 
-# Example 1:
+## Example 1:
 Use:
 ```cpp
 #include "CPP-BRAIN/cppbrain.h"
@@ -35,7 +35,7 @@ if (citys)
     citys = nullptr;
 }
 ```
-# Example 2:
+## Example 2:
 Use:
 ```cpp
 int i = 5;
@@ -51,7 +51,7 @@ for (int i = 0; i < 5; i++)
     // Do something 5 times
 }
 ```
-# Example 3:
+## Example 3:
 Use:
 ```cpp
 const char* names = "Taylor Swift,Vivian Chow,Pace Wu,Gina Jin,,Jasmine Sun,Sophia Lu,En Chin,Cindy Fei Mok";
@@ -74,7 +74,7 @@ Instead of:
 ```cpp
 // You can imagine
 ```
-# Example 4:
+## Example 4:
 Use:
 ```cpp
 std::list<int> list1 = { 2024, 2025, 2026, 2027, 2028 };
@@ -86,7 +86,7 @@ Instead of:
 // You can imagine
 ```
 
-# Documents
+## Documents
 Please use the following code to check the Help documents:
 ```cpp
 swt::CPPBrain::help();
@@ -94,13 +94,11 @@ swt::CPPBrainx<int>::help();
 swt::CPPBrainxx<int, int>::help();
 ```
 
-# More examples, more APIs
-Check:
-```
-examples\Examples.cpp
-```
+## More examples, more APIs
+Please check:
+[examples\Examples.cpp](https://github.com/davychxn/CPP-BRAIN/blob/main/examples/Examples.cpp)
 
-# Tested
+## Tested
 ```
 1. Windows 11 & Visual Studio C++ 2022
 2. Windows 11 & Visual Studio C++ 2019 & Qt 5.15.2
