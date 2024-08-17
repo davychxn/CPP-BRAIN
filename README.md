@@ -1,4 +1,4 @@
-# CPP-BRAIN: Convenient APIs to make your life longer
+# CPP-BRAIN: Convenient C++ APIs to make your life longer
 
 CPP-BRAIN C++ library consists modules of 'swt::CPPBrain', 'swt::CPPBrainx' and 'swt::CPPBrainxx'
 
