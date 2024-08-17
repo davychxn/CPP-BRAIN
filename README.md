@@ -102,4 +102,8 @@ examples\Examples.cpp
 # Tested
 ```
 1. Windows 11 & Visual Studio C++ 2022
+2. Windows 11 & Visual Studio C++ 2019 & Qt 5.15.2
+   Windows 11 & Visual Studio C++ 2019 & Qt 6.5.3
+   Windows 11 & MingGW & Qt 5.15.2
+   Windows 11 & MingGW & Qt 6.5.3
 ```
