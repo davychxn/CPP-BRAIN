@@ -63,6 +63,7 @@ Instead of:
 ```
 Use:
 ```cpp
+std::vector<std::string> giant_names = {"Taylor Swift", "Vivian Chow", "Pace Wu", "Gina Jin", "Jasmine Sun", "Sophia Lu", "En Chin", "Cindy Fei Mok"};
 std::string giant_names_in_a_row = swt::CPPBrainx<std::string>::join(giant_names, "|");
 swt::CPPBrain::print({ giant_names_in_a_row });
 ```
