@@ -2,13 +2,8 @@
 
 CPP-BRAIN library consists modules of 'swt::CPPBrain', 'swt::CPPBrainx' and 'swt::CPPBrainxx'
 
--Created by Davy Chen
+-Created by Davy Chen, Since August 8th, 2020, In the hot weather of Guangzhou
 
--Since August 8th, 2020
-
--In the hot weather of Guangzhou
-
-Some examples:
 # Example 1:
 Use:
 ```cpp
