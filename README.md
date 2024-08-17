@@ -55,6 +55,7 @@ for (int i = 0; i < 5; i++)
 Use:
 ```cpp
 const char* names = "Taylor Swift,Vivian Chow,Pace Wu,Gina Jin,,Jasmine Sun,Sophia Lu,En Chin,Cindy Fei Mok";
+// This line
 std::vector<std::string> giant_names = swt::CPPBrain::split(names, ",");
 ```
 Instead of:
@@ -64,6 +65,7 @@ Instead of:
 Use:
 ```cpp
 std::vector<std::string> giant_names = {"Taylor Swift", "Vivian Chow", "Pace Wu", "Gina Jin", "Jasmine Sun", "Sophia Lu", "En Chin", "Cindy Fei Mok"};
+// This line
 std::string giant_names_in_a_row = swt::CPPBrainx<std::string>::join(giant_names, "|");
 swt::CPPBrain::print({ giant_names_in_a_row });
 ```
