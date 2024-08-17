@@ -3,7 +3,9 @@
 CPP-BRAIN library consists modules of 'swt::CPPBrain', 'swt::CPPBrainx' and 'swt::CPPBrainxx'
 
 -Created by Davy Chen
+
 -Since August 8th, 2020
+
 -In the hot weather of Guangzhou
 
 Some examples:
@@ -93,7 +95,11 @@ swt::CPPBrainxx<int, int>::help();
 
 # Examples
 Check:
-`examples\Examples.cpp`
+```
+examples\Examples.cpp
+```
 
 # Tested
+```
 1. Windows 11 & Visual Studio C++ 2022
+```
