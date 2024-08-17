@@ -67,6 +67,7 @@ Use:
 std::vector<std::string> giant_names = {"Taylor Swift", "Vivian Chow", "Pace Wu", "Gina Jin", "Jasmine Sun", "Sophia Lu", "En Chin", "Cindy Fei Mok"};
 // This line
 std::string giant_names_in_a_row = swt::CPPBrainx<std::string>::join(giant_names, "|");
+// If you like, use this to print to console
 swt::CPPBrain::print({ giant_names_in_a_row });
 ```
 Instead of:
