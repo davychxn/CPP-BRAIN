@@ -6,9 +6,11 @@
 
 int main()
 {
+    /* # Module # - CPPBrain */
     swt::CPPBrain::print({ "# Module #", "CPPBrain"}, " - ");
     swt::CPPBrain::print_return();
 
+    /* -Example of 'split' and 'join': (EG-001) */
     swt::CPPBrain::print({ "-Example of 'split' and 'join': (EG-001)" });
 
     const char* text = "Taylor Swift,Vivian Chow,Pace Wu,Gina Jin,,Jasmine Sun,Sophia Lu,En Chin,Cindy Fei Mok";
@@ -25,6 +27,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'loop' and 'loop_index': (EG-002) */
     swt::CPPBrain::print({ "-Example of 'loop' and 'loop_index': (EG-002)" });
 
     int i = 5;
@@ -37,6 +40,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'loop_to' and 'loop_index': (EG-003) */
     swt::CPPBrain::print({ "-Example of 'loop_to' and 'loop_index': (EG-003)" });
 
     i = 0;
@@ -48,6 +52,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'loop_to_by' and 'loop_index': (EG-004) */
     swt::CPPBrain::print({ "-Example of 'loop_to_by' and 'loop_index': (EG-004)" });
 
     i = 0;
@@ -68,6 +73,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'print' and 'print_return': (EG-005) */
     swt::CPPBrain::print({ "-Example of 'print' and 'print_return': (EG-005)" });
 
     swt::CPPBrainx<std::string>::print({ "My", "name", "is", "bad-temper."}, " ");
@@ -79,6 +85,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'push_strings': (EG-006) */
     swt::CPPBrain::print({ "-Example of 'push_strings': (EG-006)" });
 
     std::vector<std::string> cats;
@@ -91,9 +98,11 @@ int main()
 
     swt::CPPBrain::print_return(2);
 
+    /* # Module # - CPPBrainx */
     swt::CPPBrain::print({ "# Module #", "CPPBrainx" }, " - ");
     swt::CPPBrain::print_return();
 
+    /* -Example of 'delete_elements': (EGX-001) */
     swt::CPPBrain::print({ "-Example of 'delete_elements': (EGX-001)"});
 
     std::set<int> set1 = { 2024, 2025, 2026, 2027, 2028 };
@@ -102,6 +111,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'delete_elements_by_indices': (EGX-002) */
     swt::CPPBrain::print({ "-Example of 'delete_elements_by_indices': (EGX-002)", "No outputs" }, " ");
 
     class City {};
@@ -117,6 +127,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'to_vector': (EGX-003) */
     swt::CPPBrain::print({ "-Example of 'to_vector': (EGX-003)" });
 
     std::set<float> set2 = { 2024.01f, 2025.02f, 2026.03f, 2027.04f, 2028.05f };
@@ -125,6 +136,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'sum': (EGX-004) */
     swt::CPPBrain::print({ "-Example of 'sum': (EGX-004)" });
 
     int sum1 = swt::CPPBrainx<int>::sum({ 1, 2, 3, 4, 5, 6 });
@@ -135,6 +147,7 @@ int main()
     swt::CPPBrain::print({ swt::CPPBrainx<int>::to_string(sum1), swt::CPPBrainx<float>::to_string(sum2) });
     swt::CPPBrain::print_return();
 
+    /* -Example of 'join': (EGX-005) */
     swt::CPPBrain::print({ "-Example of 'join': (EGX-005)" });
 
     std::vector<int> vec4 = {123, 234, 345, 456, 567};
@@ -143,6 +156,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'to_string': (EGX-006) */
     swt::CPPBrain::print({ "-Example of 'to_string': (EGX-006)" });
 
     std::string t2 = swt::CPPBrainx<double>::to_string(0.123456);
@@ -150,6 +164,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'to_type': (EGX-007) */
     swt::CPPBrain::print({ "-Example of 'to_type': (EGX-007)" });
 
     std::string t3 = swt::CPPBrainx<double>::to_type(0.123456);
@@ -157,6 +172,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'print': (EGX-008) */
     swt::CPPBrain::print({ "-Example of 'print': (EGX-008)" });
 
     std::list<int> list2 = {200, 201, 202, 203, 204};
@@ -164,6 +180,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'push_elements': (EGX-009) */
     swt::CPPBrain::print({ "-Example of 'push_elements': (EGX-009)" });
 
     std::vector<float> vec5;
@@ -173,6 +190,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'release' and 'release_arr': (EGX-010) */
     swt::CPPBrain::print({ "-Example of 'release' and 'release_arr': (EGX-010)" });
 
     class Kirkland {};
@@ -192,9 +210,11 @@ int main()
     swt::CPPBrainx<long long>::print({(long long)city1, (long long)city2, (long long)casinos, (long long)crabs.size()});
     swt::CPPBrain::print_return(2);
 
+    /* # Module # - CPPBrainxx */
     swt::CPPBrain::print({ "# Module #", "CPPBrainxx" }, " - ");
     swt::CPPBrain::print_return();
 
+    /* -Example of 'keys' and 'values': (EGXX-001) */
     swt::CPPBrain::print({ "-Example of 'keys' and 'values': (EGXX-001)" });
 
     class Vancouver
@@ -230,24 +250,28 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'delete_elements' and 'delete_elements_by_indices': (EGXX-002) */
     swt::CPPBrain::print({ "-Example of 'delete_elements' and 'delete_elements_by_indices': (EGXX-002)" });
 
     swt::CPPBrain::print({ "Please reference the example of: (EGX-001) and (EGX-002)" });
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'push_elements': (EGXX-003) */
     swt::CPPBrain::print({ "-Example of 'push_elements': (EGXX-003)" });
 
     swt::CPPBrain::print({ "Please reference the example of: (EGXX-001)" });
 
     swt::CPPBrain::print_return();
 
+    /* -Example of 'help': (EGXX-004) */
     swt::CPPBrain::print({ "-Example of 'help': (EGXX-004)" });
 
     swt::CPPBrain::help();
     swt::CPPBrainx<int>::help();
     swt::CPPBrainxx<int, int>::help();
 
+    /* -Example of 'version': (EGXX-005) */
     swt::CPPBrain::print({ "-Example of 'version': (EGXX-005)" });
 
     swt::CPPBrain::version();
