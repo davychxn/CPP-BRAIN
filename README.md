@@ -23,16 +23,16 @@ if (city1)
 ```
 Use:
 ```cpp
-Kirkland* citys = new Kirkland[5];
+Kirkland* cities = new Kirkland[5];
 // This line
-swt::CPPBrainx<Kirkland*>::release_arr(citys);
+swt::CPPBrainx<Kirkland*>::release_arr(cities);
 ```
 Instead of:
 ```cpp
-if (citys)
+if (cities)
 {
-    delete [] citys;
-    citys = nullptr;
+    delete [] cities;
+    cities = nullptr;
 }
 ```
 ## Example 2:
@@ -67,6 +67,7 @@ Use:
 std::vector<std::string> giant_names = {"Taylor Swift", "Vivian Chow", "Pace Wu", "Gina Jin", "Jasmine Sun", "Sophia Lu", "En Chin", "Cindy Fei Mok"};
 // This line
 std::string giant_names_in_a_row = swt::CPPBrainx<std::string>::join(giant_names, "|");
+
 // If you like, use this to print to console
 swt::CPPBrain::print({ giant_names_in_a_row });
 ```
@@ -80,6 +81,28 @@ Use:
 std::list<int> list1 = { 2024, 2025, 2026, 2027, 2028 };
 // Left: 2024, 2026, 2028
 swt::CPPBrainx<int>::delete_elements_by_indices(list1, { 1, 3 });
+```
+Instead of:
+```cpp
+// You can imagine
+```
+
+## Example 5:
+Use:
+```cpp
+class City {};
+class Montreal : public City {};
+class Guangzhou : public City {};
+class Seattle : public City {};
+
+std::list<City*> cool_cities = { new Montreal , new Guangzhou , new Seattle };
+// This line
+std::vector<City*> hot_cities = swt::CPPBrainx<City*>::delete_elements_by_indices(cool_cities, { 1 }, true);
+
+// Release: Guangzhou
+swt::CPPBrainx<City*>::release(hot_cities);
+// Release: Montreal, Seattle
+swt::CPPBrainx<City*>::release(cool_cities);
 ```
 Instead of:
 ```cpp
