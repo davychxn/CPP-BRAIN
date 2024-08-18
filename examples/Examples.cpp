@@ -66,7 +66,7 @@ int main()
     i = 0;
     while (swt::CPPBrain::loop_to_by(i, 10, 2))
     {
-        // 0, 2, 4, 6, 8
+        // 0, 1, 2, 3, 4
         printf("Loop index: %d\n", swt::CPPBrain::loop_index(i, 10, 2));
     }
 
@@ -75,7 +75,7 @@ int main()
     i = 10;
     while (swt::CPPBrain::loop_to_by(i, 0, -2))
     {
-        // 8, 6, 4, 2, 0
+        // 4, 3, 2, 1, 0
         printf("Loop index: %d\n", swt::CPPBrain::loop_index(i, 0, -2));
     }
 
