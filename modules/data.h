@@ -335,7 +335,7 @@ namespace swt
     private:
         static const int main_version = 1;
         static const int sub_version = 0;
-        static const int sub_sub_version = 20240809;
+        static const int sub_sub_version = 20240820;
 
     };
 
