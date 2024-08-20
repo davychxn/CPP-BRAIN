@@ -29,6 +29,23 @@ int main()
 
     swt::CPPBrain::print_return();
     
+    /* --------------------------------------- */
+    /* Example of 'range': (EG-001-001) */
+    swt::CPPBrain::print({ "-Example of 'range': (EG-001-001)" });
+
+    for (auto i : swt::CPPBrain::range(5))
+    {
+        swt::CPPBrainx<int>::print({i});
+    }
+
+    swt::CPPBrain::print_return();
+
+    for (auto i : swt::CPPBrain::range(2020, 2030, 2))
+    {
+        swt::CPPBrainx<int>::print({ i });
+    }
+
+    swt::CPPBrain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'loop' and 'loop_index': (EG-002) */
@@ -145,6 +162,17 @@ int main()
 
     swt::CPPBrain::print_return();
     
+    /* --------------------------------------- */
+    /* Example of 'map': (EGX-002-001) */
+    swt::CPPBrain::print({ "-Example of 'map': (EGX-002-001)" });
+
+    std::vector<float> areas = swt::CPPBrainx<float>::map({ 1.0f, 2.0f, 4.0f, 8.0f, 16.0f }, [](float radius) {
+            // Calculate the area of a circle from its radius
+            return 3.1415926f * radius * radius;
+        });
+
+    swt::CPPBrainx<float>::print(areas);
+    swt::CPPBrain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'to_vector': (EGX-003) */

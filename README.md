@@ -44,6 +44,13 @@ while (swt::CPPBrain::loop(i))
     // Do something 5 times, save your brain
 }
 ```
+Or, use:
+```cpp
+for (auto i : swt::CPPBrain::range(5))
+{
+    // Do something 5 times
+}
+```
 Instead of:
 ```cpp
 for (int i = 0; i < 5; i++)
@@ -103,6 +110,19 @@ std::vector<City*> hot_cities = swt::CPPBrainx<City*>::delete_elements_by_indice
 swt::CPPBrainx<City*>::release(hot_cities);
 // Release: Montreal, Seattle
 swt::CPPBrainx<City*>::release(cool_cities);
+```
+Instead of:
+```cpp
+// You can imagine
+```
+## Example 6:
+Use:
+```cpp
+// Input radii of circles and a Lambda function to calculate their areas
+std::vector<float> areas = swt::CPPBrainx<float>::map({ 1.0f, 2.0f, 4.0f, 8.0f, 16.0f }, [](float radius) {
+        // Area formula of Circle
+        return 3.1415926f * radius * radius;
+    });
 ```
 Instead of:
 ```cpp

@@ -34,22 +34,26 @@ namespace swt
         static std::vector<T> delete_elements_by_indices(std::list<T>& source, std::initializer_list<size_t> indices, bool is_return_deleted = false);
         static std::vector<T> delete_elements_by_indices(std::set<T>& source, std::vector<size_t> indices, bool is_return_deleted = false);
         static std::vector<T> delete_elements_by_indices(std::set<T>& source, std::initializer_list<size_t> indices, bool is_return_deleted = false);
+        static std::vector<T> map(const std::vector<T>& source, T (*map_func)(T));
+        static std::vector<T> map(const std::list<T>& source, T (*map_func)(T));
+        static std::vector<T> map(const std::set<T>& source, T (*map_func)(T));
+        static std::vector<T> map(const std::initializer_list<T>& source, T (*map_func)(T));
         static std::vector<T> to_vector(const std::list<T>& source);
         static std::vector<T> to_vector(const std::set<T>& source);
         static std::vector<T> to_vector(const std::initializer_list<T>& source);
-        static T sum(std::initializer_list<T> args);
-        static T sum(std::vector<T> args);
-        static T sum(std::list<T> args);
-        static T sum(std::set<T> args);
+        static T sum(const std::initializer_list<T>& args);
+        static T sum(const std::vector<T>& args);
+        static T sum(const std::list<T>& args);
+        static T sum(const std::set<T>& args);
         static std::string join(const std::vector<T>& values, const char* delimiter);
         static std::string join(const std::list<T>& values, const char* delimiter);
         static std::string join(const std::set<T>& values, const char* delimiter);
-        static std::string to_string(T value);
-        static std::string to_type(T value);
-        static void print(std::vector<T> values, const char* delimiter = ", ");
-        static void print(std::list<T> values, const char* delimiter = ", ");
-        static void print(std::set<T> values, const char* delimiter = ", ");
-        static void print(std::initializer_list<T> values, const char* delimiter = ", ");
+        static std::string to_string(const T value);
+        static std::string to_type(const T value);
+        static void print(const std::vector<T>& values, const char* delimiter = ", ");
+        static void print(const std::list<T>& values, const char* delimiter = ", ");
+        static void print(const std::set<T>& values, const char* delimiter = ", ");
+        static void print(const std::initializer_list<T>& values, const char* delimiter = ", ");
         static void push_elements(std::vector<T>& dest, std::initializer_list<T> elements);
         static void push_elements(std::list<T>& dest, std::initializer_list<T> elements);
         static void push_elements(std::set<T>& dest, std::initializer_list<T> elements);
@@ -303,6 +307,62 @@ namespace swt
     }
 
     template <typename T>
+    std::vector<T> CPPBrainx<T>::map(const std::vector<T>& source, T (*map_func)(T))
+    {
+        std::vector<T> v1;
+
+        for (auto val: source)
+        {
+            T val1 = (*map_func)(val);
+            v1.push_back(val1);
+        }
+
+        return v1;
+    }
+
+    template <typename T>
+    std::vector<T> CPPBrainx<T>::map(const std::list<T>& source, T (*map_func)(T))
+    {
+        std::vector<T> v1;
+
+        for (auto val: source)
+        {
+            T val1 = (*map_func)(val);
+            v1.push_back(val1);
+        }
+
+        return v1;
+    }
+
+    template <typename T>
+    std::vector<T> CPPBrainx<T>::map(const std::set<T>& source, T (*map_func)(T))
+    {
+        std::vector<T> v1;
+
+        for (auto val: source)
+        {
+            T val1 = (*map_func)(val);
+            v1.push_back(val1);
+        }
+
+        return v1;
+    }
+
+    template <typename T>
+    std::vector<T> CPPBrainx<T>::map(const std::initializer_list<T>& source, T (*map_func)(T))
+    {
+        std::vector<T> v1;
+
+        for (auto val: source)
+        {
+            T val1 = (*map_func)(val);
+            v1.push_back(val1);
+        }
+
+        return v1;
+    }
+
+    template <typename T>
     std::vector<T> CPPBrainx<T>::to_vector(const std::set<T>& source)
     {
         std::vector<T> v1;
@@ -329,7 +389,7 @@ namespace swt
     }
 
     template <typename T>
-    T CPPBrainx<T>::sum(std::initializer_list<T> args)
+    T CPPBrainx<T>::sum(const std::initializer_list<T>& args)
     {
         if (args.size() == 0)
         {
@@ -346,7 +406,7 @@ namespace swt
     }
 
     template <typename T>
-    T CPPBrainx<T>::sum(std::vector<T> args)
+    T CPPBrainx<T>::sum(const std::vector<T>& args)
     {
         if (args.size() == 0)
         {
@@ -363,7 +423,7 @@ namespace swt
     }
 
     template <typename T>
-    T CPPBrainx<T>::sum(std::list<T> args)
+    T CPPBrainx<T>::sum(const std::list<T>& args)
     {
         if (args.size() == 0)
         {
@@ -380,7 +440,7 @@ namespace swt
     }
 
     template <typename T>
-    T CPPBrainx<T>::sum(std::set<T> args)
+    T CPPBrainx<T>::sum(const std::set<T>& args)
     {
         if (args.size() == 0)
         {
@@ -440,7 +500,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::print(std::vector<T> values, const char* delimiter)
+    void CPPBrainx<T>::print(const std::vector<T>& values, const char* delimiter)
     {
         bool isFirst = true;
 
@@ -454,7 +514,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::print(std::list<T> values, const char* delimiter)
+    void CPPBrainx<T>::print(const std::list<T>& values, const char* delimiter)
     {
         bool isFirst = true;
 
@@ -468,7 +528,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::print(std::set<T> values, const char* delimiter)
+    void CPPBrainx<T>::print(const std::set<T>& values, const char* delimiter)
     {
         bool isFirst = true;
 
@@ -482,7 +542,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::print(std::initializer_list<T> values, const char* delimiter)
+    void CPPBrainx<T>::print(const std::initializer_list<T>& values, const char* delimiter)
     {
         bool isFirst = true;
 

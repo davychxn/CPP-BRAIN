@@ -35,6 +35,13 @@ namespace swt
             "const char* text = \"Taylor Swift,Vivian Chow,Pace Wu,Gina Jin,,Jasmine Sun,Sophia Lu,En Chin,Cindy Fei Mok\";\nstd::vector<std::string> texts = swt::CPPBrain::split(text, \",\");"
     };
 
+    const char* help_range[] = {
+            "range",
+            "std::vector<int> range(const int stop);\nstd::vector<int> range(const int start, const int stop, const int step = 1);",
+            "Return an int array in a range.",
+            "// 0, 1, 2, 3, 4\nstd::vector<int> vec1 = swt::CPPBrain::range(5);"
+    };
+
     const char* help_loop[] = {
             "loop",
             "bool loop(int& index);",
@@ -117,6 +124,13 @@ namespace swt
             "std::vector<T> delete_elements_by_indices(std::vector<T>& source, std::vector<size_t> indices, bool is_return_deleted = false);\nstd::vector<T> delete_elements_by_indices(std::vector<T>& source, std::initializer_list<size_t> indices, bool is_return_deleted = false);\nstd::vector<T> delete_elements_by_indices(std::list<T>& source, std::vector<size_t> indices, bool is_return_deleted = false);\nstd::vector<T> delete_elements_by_indices(std::list<T>& source, std::initializer_list<size_t> indices, bool is_return_deleted = false);\nstd::vector<T> delete_elements_by_indices(std::set<T>& source, std::vector<size_t> indices, bool is_return_deleted = false);\nstd::vector<T> delete_elements_by_indices(std::set<T>& source, std::initializer_list<size_t> indices, bool is_return_deleted = false);",
             "Delete undetermined counts of elements from a container by their indices, and optionally return deleted elements(allocated memory unreleased).",
             "std::vector<float> vec2 = {0.1f, 0.2f, 0.3f, 0.4f, 0.5f};\n// Left: 0.1f, 0.3f, 0.5f\nswt::CPPBrainx<float>::delete_elements_by_indices(vec2, {1, 3});"
+    };
+
+    const char* help_x_map[] = {
+            "map",
+            "std::vector<T> map(const std::vector<T>& source, T (*map_func)(T));\nstd::vector<T> map(const std::list<T>& source, T (*map_func)(T));\nstd::vector<T> map(const std::set<T>& source, T (*map_func)(T));\nstd::vector<T> map(const std::initializer_list<T>& source, T (*map_func)(T));",
+            "Take in an array of values, process each single data by Lambda function, then return the processed array.",
+            "std::vector<float> sqrts = swt::CPPBrainx<float>::map({ 1.0f, 2.0f, 4.0f, 8.0f, 16.0f }, [](float value) {\n    return sqrt(value);\n});"
     };
 
     const char* help_x_to_vector[] = {
@@ -256,6 +270,7 @@ namespace swt
         help_cppbrain,
         help_join,
         help_split,
+        help_range,
         help_loop,
         help_loop_to,
         help_loop_to_by,
@@ -271,6 +286,7 @@ namespace swt
         help_cppbrainx,
         help_x_delete_elements,
         help_x_delete_elements_by_indices,
+        help_x_map,
         help_x_to_vector,
         help_x_sum,
         help_x_join,

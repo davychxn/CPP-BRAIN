@@ -17,6 +17,8 @@ namespace swt
     public:
         static std::string join(const std::vector<std::string>& strs, const char* delimiter);
         static std::vector<std::string> split(const char* str, const char* delimiter);
+        static std::vector<int> range(const int stop);
+        static std::vector<int> range(const int start, const int stop, const int step = 1);
         static bool loop(int& index);
         static bool loop_to(int& index, const int to_val);
         static bool loop_to_by(int& index, const int to_val, const int by_val);
@@ -28,7 +30,7 @@ namespace swt
         static void push_strings(std::vector<std::string>& dest, std::initializer_list<std::string> strs);
 
     private:
-        static void print_function1(std::string value, const char* delimiter = ", ", bool is_first = true);
+        static void print_function1(const std::string value, const char* delimiter = ", ", bool is_first = true);
 
     };
 
@@ -95,6 +97,27 @@ namespace swt
         return v1;
     }
 
+    std::vector<int> CommonComponents::range(const int stop)
+    {
+        std::vector<int> v1;
+        for (int i = 0; i < stop; i++)
+        {
+            v1.push_back(i);
+        }
+
+        return v1;
+    }
+
+    std::vector<int> CommonComponents::range(const int start, const int stop, const int step)
+    {
+        std::vector<int> v1;
+        for (int i = start; i < stop; i += step)
+        {
+            v1.push_back(i);
+        }
+
+        return v1;
+    }
 
     bool CommonComponents::loop(int& index)
     {
@@ -209,7 +232,7 @@ namespace swt
         }
     }
 
-    void CommonComponents::print_function1(std::string value, const char* delimiter, bool is_first)
+    void CommonComponents::print_function1(const std::string value, const char* delimiter, bool is_first)
     {
         std::string t1 = value;
 
