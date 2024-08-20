@@ -4,7 +4,7 @@ CPP-BRAIN C++ library consists of modules of `swt::CPPBrain`, `swt::CPPBrainx` a
 
 -Created by Davy Chen, Since August 8th, 2020, In the hot weather of Guangzhou
 
-## Example 1:
+## Example 1, ONE line of pointer release:
 Use:
 ```cpp
 #include "CPP-BRAIN/cppbrain.h"
@@ -35,7 +35,7 @@ if (cities)
     cities = nullptr;
 }
 ```
-## Example 2:
+## Example 2, Simplified loop condition, mimic Python's range:
 Use:
 ```cpp
 int i = 5;
@@ -58,7 +58,7 @@ for (int i = 0; i < 5; i++)
     // Do something 5 times
 }
 ```
-## Example 3:
+## Example 3, ONE line of string splitting and joining:
 Use:
 ```cpp
 const char* names = "Taylor Swift,Vivian Chow,Pace Wu,Gina Jin,,Jasmine Sun,Sophia Lu,En Chin,Cindy Fei Mok";
@@ -82,7 +82,7 @@ Instead of:
 ```cpp
 // You can imagine
 ```
-## Example 4:
+## Example 4, Container's multi-elements deletion:
 Use:
 ```cpp
 std::list<int> list1 = { 2024, 2025, 2026, 2027, 2028 };
@@ -94,7 +94,7 @@ Instead of:
 // You can imagine
 ```
 
-## Example 5:
+## Example 5, Container's multi-elements deletion and memory release:
 Use:
 ```cpp
 class City {};
@@ -115,7 +115,7 @@ Instead of:
 ```cpp
 // You can imagine
 ```
-## Example 6:
+## Example 6, ONE line of array processing, mimic JavaScript's map Function:
 Use:
 ```cpp
 // Input radii of circles and a Lambda function to calculate their areas
