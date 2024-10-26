@@ -16,6 +16,7 @@ int main()
     swt::CPPBrain::print({ "-Example of 'split' and 'join': (EG-001)" });
 
     const char* text = "Taylor Swift,Vivian Chow,Pace Wu,Gina Jin,,Jasmine Sun,Sophia Lu,En Chin,Cindy Fei Mok";
+    // *** This line *** //
     std::vector<std::string> texts = swt::CPPBrain::split(text, ",");
     for (auto str : texts)
     {
@@ -24,6 +25,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    // *** This line *** //
     std::string text1 = swt::CPPBrainx<std::string>::join(texts, "|");
     swt::CPPBrain::print({ text1 });
 
@@ -33,6 +35,7 @@ int main()
     /* Example of 'range': (EG-001-001) */
     swt::CPPBrain::print({ "-Example of 'range': (EG-001-001)" });
 
+    // *** This line *** //
     for (auto i : swt::CPPBrain::range(5))
     {
         swt::CPPBrainx<int>::print({i});
@@ -40,6 +43,7 @@ int main()
 
     swt::CPPBrain::print_return();
 
+    // *** This line *** //
     for (auto i : swt::CPPBrain::range(2020, 2030, 2))
     {
         swt::CPPBrainx<int>::print({ i });
@@ -52,7 +56,7 @@ int main()
     swt::CPPBrain::print({ "-Example of 'loop' and 'loop_index': (EG-002)" });
 
     int i = 5;
-    // Here
+    // *** This line *** //
     while (swt::CPPBrain::loop(i))
     {
         // 4, 3, 2, 1, 0
@@ -67,6 +71,7 @@ int main()
     swt::CPPBrain::print({ "-Example of 'loop_to' and 'loop_index': (EG-003)" });
 
     i = 0;
+    // *** This line *** //
     while (swt::CPPBrain::loop_to(i, 5))
     {
         // 0, 1, 2, 3, 4
@@ -81,6 +86,7 @@ int main()
     swt::CPPBrain::print({ "-Example of 'loop_to_by' and 'loop_index': (EG-004)" });
 
     i = 0;
+    // *** This line *** //
     while (swt::CPPBrain::loop_to_by(i, 10, 2))
     {
         // 0, 1, 2, 3, 4
@@ -90,6 +96,7 @@ int main()
     swt::CPPBrain::print_return();
 
     i = 10;
+    // *** This line *** //
     while (swt::CPPBrain::loop_to_by(i, 0, -2))
     {
         // 4, 3, 2, 1, 0
@@ -118,6 +125,7 @@ int main()
     swt::CPPBrain::print({ "-Example of 'push_strings': (EG-006)" });
 
     std::vector<std::string> cats;
+    // *** This line *** //
     swt::CPPBrain::push_strings(cats, {"Lulu", "Momo", "Fortune", "Rocky", "Scars"});
 
     for (auto cat : cats)
@@ -139,6 +147,7 @@ int main()
     swt::CPPBrain::print({ "-Example of 'delete_elements': (EGX-001)"});
 
     std::set<int> set1 = { 2024, 2025, 2026, 2027, 2028 };
+    // *** This line *** //
     swt::CPPBrainx<int>::delete_elements(set1, { 2025, 2027 });
     swt::CPPBrainx<int>::print(set1);
 
@@ -155,7 +164,7 @@ int main()
     class Seattle : public City {};
 
     std::list<City*> list1 = { new Montreal , new Guangzhou , new Seattle };
-    // Here
+    // *** This line *** //
     std::vector<City*> deleted1 = swt::CPPBrainx<City*>::delete_elements_by_indices(list1, { 1 }, true);
     swt::CPPBrainx<City*>::release(deleted1);
     swt::CPPBrainx<City*>::release(list1);
@@ -166,6 +175,7 @@ int main()
     /* Example of 'map': (EGX-002-001) */
     swt::CPPBrain::print({ "-Example of 'map': (EGX-002-001)" });
 
+    // *** This line *** //
     std::vector<float> areas = swt::CPPBrainx<float>::map({ 1.0f, 2.0f, 4.0f, 8.0f, 16.0f }, [](float radius) {
             // Calculate the area of a circle from its radius
             return 3.1415926f * radius * radius;
@@ -179,6 +189,7 @@ int main()
     swt::CPPBrain::print({ "-Example of 'to_vector': (EGX-003)" });
 
     std::set<float> set2 = { 2024.01f, 2025.02f, 2026.03f, 2027.04f, 2028.05f };
+    // *** This line *** //
     std::vector<float> vec3 = swt::CPPBrainx<float>::to_vector(set2);
     swt::CPPBrainx<float>::print(vec3);
 
@@ -189,30 +200,61 @@ int main()
     /* Example of 'sum': (EGX-004) */
     swt::CPPBrain::print({ "-Example of 'sum': (EGX-004)" });
 
+    // *** This line *** //
     int sum1 = swt::CPPBrainx<int>::sum({ 1, 2, 3, 4, 5, 6 });
 
     std::vector<float> inputs1 = { 1.1f, 2.2f, 3.3f, 4.4f, 5.5f, 6.6f };
+    // *** This line *** //
     float sum2 = swt::CPPBrainx<float>::sum(inputs1);
 
     swt::CPPBrain::print({ swt::CPPBrainx<int>::to_string(sum1), swt::CPPBrainx<float>::to_string(sum2) });
     swt::CPPBrain::print_return();
     
+    /* --------------------------------------- */
+    /* Example of 'in_range_e', 'in_range_i', 'in_range_e_i', 'in_range_i_e': (EGX-004-001) */
+    swt::CPPBrain::print({ "-Example of 'in_range_e', 'in_range_i', 'in_range_e_i', 'in_range_i_e': (EGX-004-001)" });
+
+    const int fiscal_year = 2024;
+    // *** This line *** //
+    const bool is_young = swt::CPPBrainx<int>::in_range_e_i(fiscal_year - 1989, 0, 100);
+
+    if (is_young)
+    {
+        swt::CPPBrain::print({ "Taylor is young in ",  swt::CPPBrainx<int>::to_string(fiscal_year), "."}, "");
+    }
+    else
+    {
+        swt::CPPBrain::print({ "Taylor is not old in ",  swt::CPPBrainx<int>::to_string(fiscal_year), "."}, "");
+    }
+    
+    swt::CPPBrain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'join': (EGX-005) */
     swt::CPPBrain::print({ "-Example of 'join': (EGX-005)" });
 
     std::vector<int> vec4 = {123, 234, 345, 456, 567};
+    // *** This line *** //
     std::string t1 = swt::CPPBrainx<int>::join(vec4, "-");
     swt::CPPBrain::print({ t1 });
 
     swt::CPPBrain::print_return();
-    
+
+    /* --------------------------------------- */
+    /* Example of 'clamp': (EGX-005-001) */
+    swt::CPPBrain::print({ "-Example of 'clamp': (EGX-005-001)" });
+
+    // *** This line *** //
+    float clamped = swt::CPPBrainx<float>::clamp((float)2025.1224, (float)2024.0214, (float)2024.0501);
+    swt::CPPBrainx<float>::print({ clamped });
+
+    swt::CPPBrain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'to_string': (EGX-006) */
     swt::CPPBrain::print({ "-Example of 'to_string': (EGX-006)" });
 
+    // *** This line *** //
     std::string t2 = swt::CPPBrainx<double>::to_string(0.123456);
     swt::CPPBrain::print({ t2 });
 
@@ -223,17 +265,60 @@ int main()
     /* Example of 'to_type': (EGX-007) */
     swt::CPPBrain::print({ "-Example of 'to_type': (EGX-007)" });
 
+    // *** This line *** //
     std::string t3 = swt::CPPBrainx<double>::to_type(0.123456);
     swt::CPPBrain::print({ t3 });
 
     swt::CPPBrain::print_return();
     
+    /* --------------------------------------- */
+    /* Example of 'if_true', 'if_false', 'if_null', 'if_nullptr': (EGX-007-001) */
+    swt::CPPBrain::print({ "-Example of 'if_true': (EGX-007-001)" });
+
+    class Gates
+    {
+        public:
+        void Clear(const char* target)
+        {
+            swt::CPPBrain::print({ "Done with ", target, "!" }, "");
+        }
+        std::string With()
+        {
+            return "Vaccine";
+        }
+    };
+
+    Gates* william = new Gates;
+    // *** This line *** //
+    swt::CPPBrainx<Gates*>::if_true(william, [](Gates* bill) {
+            bill->Clear("Mosquitoes");
+        });
+
+    swt::CPPBrain::print_return();
+
+    /* ----------------------------- */
+
+    Gates* daughter = nullptr;
+    // *** This line *** //
+    std::string method1 = swt::CPPBrainxx<Gates*, std::string>::if_false(william, [](Gates* bill) {
+            return std::string("net");
+        }, william->With());
+
+    // *** This line *** //
+    std::string method2 = swt::CPPBrainxx<Gates*, std::string>::if_nullptr(daughter, [](Gates* phoebe) {
+            return std::string("texting dad");
+        }, "emailing dad");
+
+    swt::CPPBrain::print({ "He utilises ", method1, ", ", "while she utilises ", method2, " to clear mosquitoes." }, "");
+
+    swt::CPPBrain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'print': (EGX-008) */
     swt::CPPBrain::print({ "-Example of 'print': (EGX-008)" });
 
     std::list<int> list2 = {200, 201, 202, 203, 204};
+    // *** This line *** //
     swt::CPPBrainx<int>::print(list2);
 
     swt::CPPBrain::print_return();
@@ -244,6 +329,7 @@ int main()
     swt::CPPBrain::print({ "-Example of 'push_elements': (EGX-009)" });
 
     std::vector<float> vec5;
+    // *** This line *** //
     swt::CPPBrainx<float>::push_elements(vec5, { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f });
 
     swt::CPPBrainx<float>::print(vec5);
@@ -262,7 +348,7 @@ int main()
     Shanghai* city2 = new Shanghai;
     Macau* casinos = new Macau[6];
     std::vector<Shanghai*> crabs = {new Shanghai, new Shanghai, new Shanghai};
-    
+    // *** These lines *** //
     swt::CPPBrainx<Kirkland*>::release(city1);
     swt::CPPBrainx<Shanghai*>::release(city2);
     swt::CPPBrainx<Macau*>::release_arr(casinos);
@@ -300,9 +386,9 @@ int main()
         { new Vancouver(2020), new Vancouver(2021) , new Vancouver(2022) , new Vancouver(2023) , new Vancouver(2024) ,
           new Vancouver(2025), new Vancouver(2026) , new Vancouver(2027) , new Vancouver(2028) , new Vancouver(2029) });
 
-    // Here
+    // *** This line *** //
     std::vector<int> keys1 = swt::CPPBrainxx<int, Vancouver*>::keys(map1);
-    // And here
+    // *** This line *** //
     std::vector<Vancouver*> vals1 = swt::CPPBrainxx<int, Vancouver*>::values(map1);
 
     swt::CPPBrainx<int>::print(keys1);
@@ -336,18 +422,10 @@ int main()
     
     
     /* --------------------------------------- */
-    /* Example of 'help': (EGXX-004) */
-    swt::CPPBrain::print({ "-Example of 'help': (EGXX-004)" });
-
-    swt::CPPBrain::help();
-    swt::CPPBrainx<int>::help();
-    swt::CPPBrainxx<int, int>::help();
-    
-    
-    /* --------------------------------------- */
     /* Example of 'version': (EGXX-005) */
     swt::CPPBrain::print({ "-Example of 'version': (EGXX-005)" });
 
+    // *** This line *** //
     swt::CPPBrain::version();
     swt::CPPBrain::print_return();
 }

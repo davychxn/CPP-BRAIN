@@ -18,10 +18,23 @@
 
 namespace swt
 {
+    /**
+     * CPP-BRAIN helps you enjoy C++ coding a bit more :)
+     * CPP-BRAIN library consists modules of 'swt::CPPBrain', 'swt::CPPBrainx' and 'swt::CPPBrainxx'
+     * - Created by Davy Chen
+     * - Since August 8th, 2020
+     * - In the hot weather of Guangzhou
+     */
     class CPPBrain: public CommonComponents
     {
     public:
+        /**
+         * @brief Print Help information of module 'swt::CPPBrain' to console.
+         */
         static void help();
+        /**
+         * @brief Print Version information to console.
+         */
         static void version();
         
     };

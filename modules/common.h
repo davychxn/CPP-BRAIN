@@ -11,25 +11,63 @@
 
 namespace swt
 {
-
+    /**
+     * Inherited by class CPPBrain.
+     * Please do not call directly, use class CPPBrain instead.
+     */
     class CommonComponents
     {
+    private:
+        CommonComponents();
     public:
+        /**
+         * @brief Return a joined string separated by a delimiter.
+         */
         static std::string join(const std::vector<std::string>& strs, const char* delimiter);
+        /**
+         * @brief Return a strings array sliced from source string by a delimiter.
+         */
         static std::vector<std::string> split(const char* str, const char* delimiter);
+        /**
+         * @brief Return a continuous int array in a range.
+         */
         static std::vector<int> range(const int stop);
         static std::vector<int> range(const int start, const int stop, const int step = 1);
+        /**
+         * @brief Works with 'while' operator, guarantees assigned count of loops.
+         */
         static bool loop(int& index);
+        /**
+         * @brief Works with 'while' operator, loops from initial 'index' value to 'to_val' by 1 ascendingly.
+         */
         static bool loop_to(int& index, const int to_val);
+        /**
+         * @brief Works with 'while' operator, loops from initial 'index' value to 'to_val' by 'by_val' ascendingly or descendingly.
+         */
         static bool loop_to_by(int& index, const int to_val, const int by_val);
+        /**
+         * @brief Works with 'loop', 'loop_to', 'loop_to_by' APIs correspondingly. Result of unmatched usage is undefined.
+         */
         static int loop_index(const int index);
         static int loop_index(const int index, const int to_val);
         static int loop_index(const int index, const int to_val, const int by_val);
+        /**
+         * @brief Print undetermined count of std::string(s) to console with or without a delimiter.
+         */
         static void print(std::initializer_list<std::string> values, const char* delimiter = ", ");
+        /**
+         * @brief Print return(s) to console.
+         */
         static void print_return(const int counts = 1);
+        /**
+         * @brief Push undetermined count of strings into a container.
+         */
         static void push_strings(std::vector<std::string>& dest, std::initializer_list<std::string> strs);
 
     private:
+        /**
+         * @brief Please do not call.
+         */
         static void print_function1(const std::string value, const char* delimiter = ", ", bool is_first = true);
 
     };

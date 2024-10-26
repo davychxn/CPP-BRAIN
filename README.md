@@ -129,12 +129,45 @@ Instead of:
 // You can imagine
 ```
 
+## Example 7, Clamp a value:
+Use:
+```cpp
+const int a_valid_month = swt::CPPBrainx<int>::clamp(15, 1, 12);
+```
+Instead of:
+```cpp
+// You can imagine
+```
+
+## Example 8, Trigger a function based on a value:
+Use:
+```cpp
+class Gates { public: void is() { swt::CPPBrain::print({ "Co-founder of Microsoft." }); } };
+const Gates* william = new Gates;
+// This line
+swt::CPPBrainx<Gates*>::if_true(william, [](Gates* bill) {
+        bill->is();
+    });
+```
+Instead of:
+```cpp
+// You can imagine
+```
+
+## Example 9, Tell a value lies in a range:
+Use:
+```cpp
+const bool is_21th_century = swt::CPPBrainx<int>::in_range_i_e(2024, 2000, 3000);
+```
+Instead of:
+```cpp
+// You can imagine
+```
+
 ## Documents
 Please use the following code to check the Help documents:
 ```cpp
 swt::CPPBrain::help();
-swt::CPPBrainx<int>::help();
-swt::CPPBrainxx<int, int>::help();
 ```
 
 ## More examples, more APIs

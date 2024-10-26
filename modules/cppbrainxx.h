@@ -16,14 +16,51 @@ namespace swt
     class CPPBrainxx
     {
     public:
+        /**
+         * @brief Retrieve keys of a std::map into a std::vector.
+         */
         static std::vector<T1> keys(const std::map<T1, T2>& source);
+        /**
+         * @brief Delete undetermined counts of elements from a std::map by its keys, and optionally return deleted elements(allocated memory unreleased).
+         */
         static std::vector<T2> delete_elements(std::map<T1, T2>& source, std::vector<T1> keys, bool is_return_deleted = false);
         static std::vector<T2> delete_elements(std::map<T1, T2>& source, std::initializer_list<T1> keys, bool is_return_deleted = false);
+        /**
+         * @brief Delete undetermined counts of elements from a std::map by its indices, and optionally return deleted elements(allocated memory unreleased).
+         */
         static std::vector<T2> delete_elements_by_indices(std::map<T1, T2>& source, std::vector<size_t> indices, bool is_return_deleted = false);
         static std::vector<T2> delete_elements_by_indices(std::map<T1, T2>& source, std::initializer_list<size_t> indices, bool is_return_deleted = false);
+        /**
+         * @brief Retrieve values of a std::map into a std::vector.
+         */
         static std::vector<T2> values(const std::map<T1, T2>& source);
+        /**
+         * @brief If input value is true then call input function to return the output or default_value.
+         */
+        static T2 if_true(const T1 value, T2 (*custom_func)(const T1 value), const T2 default_value);
+        /**
+         * @brief If input value is false then call input function to return the output or default_value.
+         */
+        static T2 if_false(const T1 value, T2 (*custom_func)(const T1 value), const T2 default_value);
+        /**
+         * @brief If input value is null then call input function to return the output or default_value.
+         */
+        static T2 if_null(const T1 value, T2 (*custom_func)(const T1 value), const T2 default_value);
+        /**
+         * @brief If input value is nullptr then call input function to return the output or default_value.
+         */
+        static T2 if_nullptr(const T1 value, T2 (*custom_func)(const T1 value), const T2 default_value);
+        /**
+         * @brief Push undetermined count of key-value pairs into a std::map.
+         */
         static void push_elements(std::map<T1, T2>& dest, std::initializer_list<T1> keys, std::initializer_list<T2> values);
+        /**
+         * @brief Print Help information of module 'swt::CPPBrainxx' to console.
+         */
         static void help();
+        /**
+         * @brief Print Version information to console.
+         */
         static void version();
 
     };
@@ -112,6 +149,30 @@ namespace swt
         }
 
         return values1;
+    }
+
+    template <typename T1, typename T2>
+    T2 CPPBrainxx<T1, T2>::if_true(const T1 value, T2 (*custom_func)(const T1 value), T2 default_value)
+    {
+        return value ? (*custom_func)(value) : default_value;
+    }
+
+    template <typename T1, typename T2>
+    T2 CPPBrainxx<T1, T2>::if_false(const T1 value, T2 (*custom_func)(const T1 value), T2 default_value)
+    {
+        return !value ? (*custom_func)(value) : default_value;
+    }
+
+    template <typename T1, typename T2>
+    T2 CPPBrainxx<T1, T2>::if_null(const T1 value, T2 (*custom_func)(const T1 value), T2 default_value)
+    {
+        return value == NULL ? (*custom_func)(value) : default_value;
+    }
+
+    template <typename T1, typename T2>
+    T2 CPPBrainxx<T1, T2>::if_nullptr(const T1 value, T2 (*custom_func)(const T1 value), T2 default_value)
+    {
+        return value == nullptr ? (*custom_func)(value) : default_value;
     }
 
     template <typename T1, typename T2>
