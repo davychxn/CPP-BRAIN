@@ -132,7 +132,9 @@ Instead of:
 ## Example 7, Clamp a value:
 Use:
 ```cpp
-const int a_valid_month = swt::brainx<int>::clamp(15, 1, 12);
+const int test_month = 15;
+// This line, both ends of the range are inclusive
+const int a_valid_month = swt::brainx<int>::clamp(test_month, 1, 12);
 ```
 Instead of:
 ```cpp
@@ -143,9 +145,9 @@ Instead of:
 Use:
 ```cpp
 class Gates { public: void is() { swt::brain::print({ "Co-founder of Microsoft." }); } };
-const Gates* william = new Gates;
+const Gates* bill = new Gates;
 // This line
-swt::brainx<Gates*>::if_true(william, [](Gates* bill) {
+swt::brainx<Gates*>::if_true(bill, [](Gates* bill) {
         bill->is();
     });
 ```
@@ -157,7 +159,9 @@ Instead of:
 ## Example 9, Tell if a value lies in a range:
 Use:
 ```cpp
-const bool is_21th_century = swt::brainx<int>::in_range_i_e(2024, 2000, 3000);
+const int test_year = 2024;
+// This line, the range is 2000(inclusive) to 3000(exclusive)
+const bool is_21th_century = swt::brainx<int>::in_range_i_e(test_year, 2000, 3000);
 ```
 Instead of:
 ```cpp

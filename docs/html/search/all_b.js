@@ -8,5 +8,6 @@ var searchData=
   ['container_20s_20multi_20elements_20deletion_20and_20memory_20release_3a_5',['Example 5, Container&apos;s multi-elements deletion and memory release:',['../index.html#autotoc_md5',1,'']]],
   ['container_20s_20multi_20elements_20deletion_3a_6',['Example 4, Container&apos;s multi-elements deletion:',['../index.html#autotoc_md4',1,'']]],
   ['convenient_20c_20apis_20to_20make_20your_20life_20longer_7',['CPP-BRAIN: Convenient C++ APIs to make your life longer',['../index.html',1,'']]],
-  ['cpp_20brain_3a_20convenient_20c_20apis_20to_20make_20your_20life_20longer_8',['CPP-BRAIN: Convenient C++ APIs to make your life longer',['../index.html',1,'']]]
+  ['cpp_20brain_3a_20convenient_20c_20apis_20to_20make_20your_20life_20longer_8',['CPP-BRAIN: Convenient C++ APIs to make your life longer',['../index.html',1,'']]],
+  ['culture_9',['Culture',['../index.html#autotoc_md14',1,'']]]
 ];

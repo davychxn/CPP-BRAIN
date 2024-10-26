@@ -10,6 +10,6 @@ var searchData=
   ['example_206_20one_20line_20of_20array_20processing_20mimic_20javascript_20s_20map_20function_3a_7',['Example 6, ONE line of array processing, mimic JavaScript&apos;s map Function:',['../index.html#autotoc_md6',1,'']]],
   ['example_207_20clamp_20a_20value_3a_8',['Example 7, Clamp a value:',['../index.html#autotoc_md7',1,'']]],
   ['example_208_20trigger_20a_20function_20based_20on_20a_20value_3a_9',['Example 8, Trigger a function based on a value:',['../index.html#autotoc_md8',1,'']]],
-  ['example_209_20tell_20a_20value_20lies_20in_20a_20range_3a_10',['Example 9, Tell a value lies in a range:',['../index.html#autotoc_md9',1,'']]],
+  ['example_209_20tell_20if_20a_20value_20lies_20in_20a_20range_3a_10',['Example 9, Tell if a value lies in a range:',['../index.html#autotoc_md9',1,'']]],
   ['examples_20more_20apis_11',['More examples, more APIs',['../index.html#autotoc_md11',1,'']]]
 ];

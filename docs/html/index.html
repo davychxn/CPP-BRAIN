@@ -179,22 +179,26 @@ Example 6, ONE line of array processing, mimic JavaScript's map Function:</h1>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
 Example 7, Clamp a value:</h1>
-<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> a_valid_month = <a class="code hl_function" href="classswt_1_1brainx.html#a759ad5559da7e971ec7edd3d88f36eeb">swt::brainx&lt;int&gt;::clamp</a>(15, 1, 12);</div>
+<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> test_month = 15;</div>
+<div class="line"><span class="comment">// This line, both ends of the range are inclusive</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> a_valid_month = <a class="code hl_function" href="classswt_1_1brainx.html#a759ad5559da7e971ec7edd3d88f36eeb">swt::brainx&lt;int&gt;::clamp</a>(test_month, 1, 12);</div>
 <div class="ttc" id="aclassswt_1_1brainx_html_a759ad5559da7e971ec7edd3d88f36eeb"><div class="ttname"><a href="classswt_1_1brainx.html#a759ad5559da7e971ec7edd3d88f36eeb">swt::brainx::clamp</a></div><div class="ttdeci">static T clamp(const T value, const T range_end1, const T range_end2)</div><div class="ttdoc">Return a new value based on input value, but clamped between the range ends. The order of range ends ...</div><div class="ttdef"><b>Definition</b> cppbrainx.h:541</div></div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
 Example 8, Trigger a function based on a value:</h1>
 <p>Use: </p><div class="fragment"><div class="line"><span class="keyword">class </span>Gates { <span class="keyword">public</span>: <span class="keywordtype">void</span> is() { <a class="code hl_function" href="classswt_1_1_common_components.html#a933f262c753da3a577c6890e26a447bf">swt::brain::print</a>({ <span class="stringliteral">&quot;Co-founder of Microsoft.&quot;</span> }); } };</div>
-<div class="line"><span class="keyword">const</span> Gates* william = <span class="keyword">new</span> Gates;</div>
+<div class="line"><span class="keyword">const</span> Gates* bill = <span class="keyword">new</span> Gates;</div>
 <div class="line"><span class="comment">// This line</span></div>
-<div class="line"><a class="code hl_function" href="classswt_1_1brainx.html#a8f61dd3deaf9d4268aa7ea150dd45782">swt::brainx&lt;Gates*&gt;::if_true</a>(william, [](Gates* bill) {</div>
+<div class="line"><a class="code hl_function" href="classswt_1_1brainx.html#a8f61dd3deaf9d4268aa7ea150dd45782">swt::brainx&lt;Gates*&gt;::if_true</a>(bill, [](Gates* bill) {</div>
 <div class="line">        bill-&gt;is();</div>
 <div class="line">    });</div>
 <div class="ttc" id="aclassswt_1_1brainx_html_a8f61dd3deaf9d4268aa7ea150dd45782"><div class="ttname"><a href="classswt_1_1brainx.html#a8f61dd3deaf9d4268aa7ea150dd45782">swt::brainx::if_true</a></div><div class="ttdeci">static void if_true(const T value, void(*custom_func)(const T value))</div><div class="ttdoc">If input value is true then call input function.</div><div class="ttdef"><b>Definition</b> cppbrainx.h:592</div></div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
-Example 9, Tell a value lies in a range:</h1>
-<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">bool</span> is_21th_century = <a class="code hl_function" href="classswt_1_1brainx.html#af493148f787b726db3a7857233fcc4d4">swt::brainx&lt;int&gt;::in_range_i_e</a>(2024, 2000, 3000);</div>
+Example 9, Tell if a value lies in a range:</h1>
+<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> test_year = 2024;</div>
+<div class="line"><span class="comment">// This line, the range is 2000(inclusive) to 3000(exclusive)</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">bool</span> is_21th_century = <a class="code hl_function" href="classswt_1_1brainx.html#af493148f787b726db3a7857233fcc4d4">swt::brainx&lt;int&gt;::in_range_i_e</a>(test_year, 2000, 3000);</div>
 <div class="ttc" id="aclassswt_1_1brainx_html_af493148f787b726db3a7857233fcc4d4"><div class="ttname"><a href="classswt_1_1brainx.html#af493148f787b726db3a7857233fcc4d4">swt::brainx::in_range_i_e</a></div><div class="ttdeci">static bool in_range_i_e(const T value, const T range_left, const T range_right)</div><div class="ttdoc">Tell if input value lies between the range_left inclusively and range_right exclusively....</div><div class="ttdef"><b>Definition</b> cppbrainx.h:581</div></div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
@@ -211,7 +215,21 @@ Tested</h1>
 <div class="line">   Windows 11 &amp; Visual Studio C++ 2019 &amp; Qt 6.5.3</div>
 <div class="line">   Windows 11 &amp; MingGW &amp; Qt 5.15.2</div>
 <div class="line">   Windows 11 &amp; MingGW &amp; Qt 6.5.3</div>
-</div><!-- fragment --> </div></div><!-- PageDoc -->
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md13"></a>
+History</h1>
+<ul>
+<li>October 26th, 2024 - Version 1 is frozen, Version 2 is current development version. <div class="fragment"><div class="line">Major changes are class names are shortened:</div>
+<div class="line">swt::CPPBrain -&gt; swt::brain</div>
+<div class="line">swt::CPPBrainx -&gt; swt::brainx</div>
+<div class="line">swt::CPPBrainxx -&gt; swt::brainxx</div>
+</div><!-- fragment --></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md14"></a>
+Culture</h1>
+<p>Question: Why do we use "swt" as the namespace of the project?</p>
+<p>Answer: "swt" is short for "sweet". The adjective stands for a longing for the dream life in your mind where the persistent dream has been developed since the your very first taste to the beauty of the world and human. While through all the rains and storms in your life the flame of the dream has yet been put out.</p>
+<p>Wish sweet smiles, sweet people, sweet places, sweet moments, sweet stories, sweet endings to sweet you in everyday. </p>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 <!-- start footer part -->

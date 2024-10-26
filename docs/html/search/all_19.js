@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['tell_20a_20value_20lies_20in_20a_20range_3a_0',['Example 9, Tell a value lies in a range:',['../index.html#autotoc_md9',1,'']]],
+  ['tell_20if_20a_20value_20lies_20in_20a_20range_3a_0',['Example 9, Tell if a value lies in a range:',['../index.html#autotoc_md9',1,'']]],
   ['tested_1',['Tested',['../index.html#autotoc_md12',1,'']]],
   ['to_20make_20your_20life_20longer_2',['CPP-BRAIN: Convenient C++ APIs to make your life longer',['../index.html',1,'']]],
   ['to_5fstring_3',['to_string',['../classswt_1_1brainx.html#a9b7631ba102a7184884a819449022fbd',1,'swt::brainx']]],
