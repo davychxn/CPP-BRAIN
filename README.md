@@ -199,6 +199,6 @@ swt::CPPBrainxx -> swt::brainxx
 ## Culture
 Question: Why do we use "swt" as the namespace of the project?
 
-Answer: "swt" is short for "sweet". The adjective stands for a longing for the dream life in your mind where the persistent dream has been developed since the your very first taste to the beauty of the world and human. While through all the rains and storms in your life the flame of the dream has yet been put out.
+Answer: "swt" is short for "sweet". The adjective stands for a longing of the dream life living in your mind where the persistent dream has been developed since the your very first taste to the beauty of the world and human. While through all the rains and storms in your life the flame of the dream has yet been put out.
 
 Wish sweet smiles, sweet people, sweet places, sweet moments, sweet stories, sweet endings to sweet you in everyday.
