@@ -8,5 +8,5 @@ var searchData=
   ['split_5',['split',['../classswt_1_1_common_components.html#aa35813ac541608a9d80ee3cbeb9f336f',1,'swt::CommonComponents']]],
   ['splitting_20and_20joining_3a_6',['Example 3, ONE line of string splitting and joining:',['../index.html#autotoc_md3',1,'']]],
   ['string_20splitting_20and_20joining_3a_7',['Example 3, ONE line of string splitting and joining:',['../index.html#autotoc_md3',1,'']]],
-  ['sum_8',['sum',['../classswt_1_1_c_p_p_brainx.html#a89808c75bee2e969bad6c64cbd4f5aaa',1,'swt::CPPBrainx']]]
+  ['sum_8',['sum',['../classswt_1_1brainx.html#ad83ccc5a5e12949b997ef4e7157a653a',1,'swt::brainx']]]
 ];

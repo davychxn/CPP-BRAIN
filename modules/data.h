@@ -29,7 +29,7 @@ namespace swt
         static void help(const char* html_name);
 
     private:
-        static const int main_version = 1;
+        static const int main_version = 2;
         static const int sub_version = 0;
         static const int sub_sub_version = 20241026;
 

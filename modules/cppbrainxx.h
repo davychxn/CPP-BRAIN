@@ -13,7 +13,7 @@
 namespace swt
 {
     template <typename T1, typename T2>
-    class CPPBrainxx
+    class brainxx
     {
     public:
         /**
@@ -55,7 +55,7 @@ namespace swt
          */
         static void push_elements(std::map<T1, T2>& dest, std::initializer_list<T1> keys, std::initializer_list<T2> values);
         /**
-         * @brief Print Help information of module 'swt::CPPBrainxx' to console.
+         * @brief Print Help information of module 'swt::brainxx' to console.
          */
         static void help();
         /**
@@ -66,7 +66,7 @@ namespace swt
     };
 
     template <typename T1, typename T2>
-    std::vector<T1> CPPBrainxx<T1, T2>::keys(const std::map<T1, T2>& source)
+    std::vector<T1> brainxx<T1, T2>::keys(const std::map<T1, T2>& source)
     {
         std::vector<T1> keys1;
 
@@ -79,7 +79,7 @@ namespace swt
     }
 
     template <typename T1, typename T2>
-    std::vector<T2> CPPBrainxx<T1, T2>::delete_elements(std::map<T1, T2>& source, std::vector<T1> keys, bool is_return_deleted)
+    std::vector<T2> brainxx<T1, T2>::delete_elements(std::map<T1, T2>& source, std::vector<T1> keys, bool is_return_deleted)
     {
         std::vector<T2> deleted;
 
@@ -100,14 +100,14 @@ namespace swt
     }
 
     template <typename T1, typename T2>
-    std::vector<T2> CPPBrainxx<T1, T2>::delete_elements(std::map<T1, T2>& source, std::initializer_list<T1> keys, bool is_return_deleted)
+    std::vector<T2> brainxx<T1, T2>::delete_elements(std::map<T1, T2>& source, std::initializer_list<T1> keys, bool is_return_deleted)
     {
-        std::vector<T1> keys1 = CPPBrainx<T1>::to_vector(keys);
+        std::vector<T1> keys1 = brainx<T1>::to_vector(keys);
         return delete_elements(source, keys1, is_return_deleted);
     }
 
     template <typename T1, typename T2>
-    std::vector<T2> CPPBrainxx<T1, T2>::delete_elements_by_indices(std::map<T1, T2>& source, std::vector<size_t> indices, bool is_return_deleted)
+    std::vector<T2> brainxx<T1, T2>::delete_elements_by_indices(std::map<T1, T2>& source, std::vector<size_t> indices, bool is_return_deleted)
     {
         std::vector<T2> deleted;
 
@@ -132,14 +132,14 @@ namespace swt
     }
 
     template <typename T1, typename T2>
-    std::vector<T2> CPPBrainxx<T1, T2>::delete_elements_by_indices(std::map<T1, T2>& source, std::initializer_list<size_t> indices, bool is_return_deleted)
+    std::vector<T2> brainxx<T1, T2>::delete_elements_by_indices(std::map<T1, T2>& source, std::initializer_list<size_t> indices, bool is_return_deleted)
     {
-        std::vector<size_t> indices1 = CPPBrainx<size_t>::to_vector(indices);
+        std::vector<size_t> indices1 = brainx<size_t>::to_vector(indices);
         return delete_elements_by_indices(source, indices1, is_return_deleted);
     }
 
     template <typename T1, typename T2>
-    std::vector<T2> CPPBrainxx<T1, T2>::values(const std::map<T1, T2>& source)
+    std::vector<T2> brainxx<T1, T2>::values(const std::map<T1, T2>& source)
     {
         std::vector<T2> values1;
 
@@ -152,31 +152,31 @@ namespace swt
     }
 
     template <typename T1, typename T2>
-    T2 CPPBrainxx<T1, T2>::if_true(const T1 value, T2 (*custom_func)(const T1 value), T2 default_value)
+    T2 brainxx<T1, T2>::if_true(const T1 value, T2 (*custom_func)(const T1 value), T2 default_value)
     {
         return value ? (*custom_func)(value) : default_value;
     }
 
     template <typename T1, typename T2>
-    T2 CPPBrainxx<T1, T2>::if_false(const T1 value, T2 (*custom_func)(const T1 value), T2 default_value)
+    T2 brainxx<T1, T2>::if_false(const T1 value, T2 (*custom_func)(const T1 value), T2 default_value)
     {
         return !value ? (*custom_func)(value) : default_value;
     }
 
     template <typename T1, typename T2>
-    T2 CPPBrainxx<T1, T2>::if_null(const T1 value, T2 (*custom_func)(const T1 value), T2 default_value)
+    T2 brainxx<T1, T2>::if_null(const T1 value, T2 (*custom_func)(const T1 value), T2 default_value)
     {
         return value == NULL ? (*custom_func)(value) : default_value;
     }
 
     template <typename T1, typename T2>
-    T2 CPPBrainxx<T1, T2>::if_nullptr(const T1 value, T2 (*custom_func)(const T1 value), T2 default_value)
+    T2 brainxx<T1, T2>::if_nullptr(const T1 value, T2 (*custom_func)(const T1 value), T2 default_value)
     {
         return value == nullptr ? (*custom_func)(value) : default_value;
     }
 
     template <typename T1, typename T2>
-    void CPPBrainxx<T1, T2>::push_elements(std::map<T1, T2>& dest, std::initializer_list<T1> keys, std::initializer_list<T2> values)
+    void brainxx<T1, T2>::push_elements(std::map<T1, T2>& dest, std::initializer_list<T1> keys, std::initializer_list<T2> values)
     {
         if (keys.size() != values.size())
         {
@@ -192,13 +192,13 @@ namespace swt
     }
 
     template <typename T1, typename T2>
-    void CPPBrainxx<T1, T2>::help()
+    void brainxx<T1, T2>::help()
     {
         DataManager::help_xx();
     }
 
     template <typename T1, typename T2>
-    void CPPBrainxx<T1, T2>::version()
+    void brainxx<T1, T2>::version()
     {
         DataManager::version();
     }

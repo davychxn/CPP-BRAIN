@@ -12,8 +12,8 @@
 namespace swt
 {
     /**
-     * Inherited by class CPPBrain.
-     * Please do not call directly, use class CPPBrain instead.
+     * Inherited by class brain.
+     * Please do not call directly, use class brain instead.
      */
     class CommonComponents
     {

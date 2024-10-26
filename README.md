@@ -1,6 +1,6 @@
 # CPP-BRAIN: Convenient C++ APIs to make your life longer
 
-CPP-BRAIN C++ library consists of modules of `swt::CPPBrain`, `swt::CPPBrainx` and `swt::CPPBrainxx`
+CPP-BRAIN C++ library consists of modules of `swt::brain`, `swt::brainx` and `swt::brainxx`
 
 -Created by Davy Chen, Since August 8th, 2020, In the hot weather of Guangzhou
 
@@ -11,7 +11,7 @@ Use:
 
 Shanghai* city1 = new Shanghai;
 // This line
-swt::CPPBrainx<Shanghai*>::release(city1);
+swt::brainx<Shanghai*>::release(city1);
 ```
 Instead of:
 ```cpp
@@ -25,7 +25,7 @@ Use:
 ```cpp
 Kirkland* cities = new Kirkland[5];
 // This line
-swt::CPPBrainx<Kirkland*>::release_arr(cities);
+swt::brainx<Kirkland*>::release_arr(cities);
 ```
 Instead of:
 ```cpp
@@ -39,14 +39,14 @@ if (cities)
 Use:
 ```cpp
 int i = 5;
-while (swt::CPPBrain::loop(i))
+while (swt::brain::loop(i))
 {
     // Do something 5 times, save your brain
 }
 ```
 Or, use:
 ```cpp
-for (auto i : swt::CPPBrain::range(5))
+for (auto i : swt::brain::range(5))
 {
     // Do something 5 times
 }
@@ -63,7 +63,7 @@ Use:
 ```cpp
 const char* names = "Taylor Swift,Vivian Chow,Pace Wu,Gina Jin,,Jasmine Sun,Sophia Lu,En Chin,Cindy Fei Mok";
 // This line
-std::vector<std::string> giant_names = swt::CPPBrain::split(names, ",");
+std::vector<std::string> giant_names = swt::brain::split(names, ",");
 ```
 Instead of:
 ```cpp
@@ -73,10 +73,10 @@ Use:
 ```cpp
 std::vector<std::string> giant_names = {"Taylor Swift", "Vivian Chow", "Pace Wu", "Gina Jin", "Jasmine Sun", "Sophia Lu", "En Chin", "Cindy Fei Mok"};
 // This line
-std::string giant_names_in_a_row = swt::CPPBrainx<std::string>::join(giant_names, "|");
+std::string giant_names_in_a_row = swt::brainx<std::string>::join(giant_names, "|");
 
 // If you like, use this to print to console
-swt::CPPBrain::print({ giant_names_in_a_row });
+swt::brain::print({ giant_names_in_a_row });
 ```
 Instead of:
 ```cpp
@@ -87,7 +87,7 @@ Use:
 ```cpp
 std::list<int> list1 = { 2024, 2025, 2026, 2027, 2028 };
 // Left: 2024, 2026, 2028
-swt::CPPBrainx<int>::delete_elements_by_indices(list1, { 1, 3 });
+swt::brainx<int>::delete_elements_by_indices(list1, { 1, 3 });
 ```
 Instead of:
 ```cpp
@@ -104,12 +104,12 @@ class Seattle : public City {};
 
 std::list<City*> cool_cities = { new Montreal , new Guangzhou , new Seattle };
 // This line
-std::vector<City*> hot_cities = swt::CPPBrainx<City*>::delete_elements_by_indices(cool_cities, { 1 }, true);
+std::vector<City*> hot_cities = swt::brainx<City*>::delete_elements_by_indices(cool_cities, { 1 }, true);
 
 // Release: Guangzhou
-swt::CPPBrainx<City*>::release(hot_cities);
+swt::brainx<City*>::release(hot_cities);
 // Release: Montreal, Seattle
-swt::CPPBrainx<City*>::release(cool_cities);
+swt::brainx<City*>::release(cool_cities);
 ```
 Instead of:
 ```cpp
@@ -119,7 +119,7 @@ Instead of:
 Use:
 ```cpp
 // Input radii of circles and a Lambda function to calculate their areas
-std::vector<float> areas = swt::CPPBrainx<float>::map({ 1.0f, 2.0f, 4.0f, 8.0f, 16.0f }, [](float radius) {
+std::vector<float> areas = swt::brainx<float>::map({ 1.0f, 2.0f, 4.0f, 8.0f, 16.0f }, [](float radius) {
         // Area formula of Circle
         return 3.1415926f * radius * radius;
     });
@@ -132,7 +132,7 @@ Instead of:
 ## Example 7, Clamp a value:
 Use:
 ```cpp
-const int a_valid_month = swt::CPPBrainx<int>::clamp(15, 1, 12);
+const int a_valid_month = swt::brainx<int>::clamp(15, 1, 12);
 ```
 Instead of:
 ```cpp
@@ -142,10 +142,10 @@ Instead of:
 ## Example 8, Trigger a function based on a value:
 Use:
 ```cpp
-class Gates { public: void is() { swt::CPPBrain::print({ "Co-founder of Microsoft." }); } };
+class Gates { public: void is() { swt::brain::print({ "Co-founder of Microsoft." }); } };
 const Gates* william = new Gates;
 // This line
-swt::CPPBrainx<Gates*>::if_true(william, [](Gates* bill) {
+swt::brainx<Gates*>::if_true(william, [](Gates* bill) {
         bill->is();
     });
 ```
@@ -157,7 +157,7 @@ Instead of:
 ## Example 9, Tell a value lies in a range:
 Use:
 ```cpp
-const bool is_21th_century = swt::CPPBrainx<int>::in_range_i_e(2024, 2000, 3000);
+const bool is_21th_century = swt::brainx<int>::in_range_i_e(2024, 2000, 3000);
 ```
 Instead of:
 ```cpp
@@ -167,7 +167,7 @@ Instead of:
 ## Documents
 Please use the following code to check the Help documents:
 ```cpp
-swt::CPPBrain::help();
+swt::brain::help();
 ```
 
 ## More examples, more APIs

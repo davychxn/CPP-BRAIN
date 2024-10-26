@@ -6,157 +6,157 @@
 
 int main()
 {
-    /* # Module # - CPPBrain */
-    swt::CPPBrain::print({ "# Module #", "CPPBrain"}, " - ");
-    swt::CPPBrain::print_return();
+    /* # Module # - brain */
+    swt::brain::print({ "# Module #", "brain"}, " - ");
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'split' and 'join': (EG-001) */
-    swt::CPPBrain::print({ "-Example of 'split' and 'join': (EG-001)" });
+    swt::brain::print({ "-Example of 'split' and 'join': (EG-001)" });
 
     const char* text = "Taylor Swift,Vivian Chow,Pace Wu,Gina Jin,,Jasmine Sun,Sophia Lu,En Chin,Cindy Fei Mok";
     // *** This line *** //
-    std::vector<std::string> texts = swt::CPPBrain::split(text, ",");
+    std::vector<std::string> texts = swt::brain::split(text, ",");
     for (auto str : texts)
     {
-        swt::CPPBrain::print({ str });
+        swt::brain::print({ str });
     }
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
 
     // *** This line *** //
-    std::string text1 = swt::CPPBrainx<std::string>::join(texts, "|");
-    swt::CPPBrain::print({ text1 });
+    std::string text1 = swt::brainx<std::string>::join(texts, "|");
+    swt::brain::print({ text1 });
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'range': (EG-001-001) */
-    swt::CPPBrain::print({ "-Example of 'range': (EG-001-001)" });
+    swt::brain::print({ "-Example of 'range': (EG-001-001)" });
 
     // *** This line *** //
-    for (auto i : swt::CPPBrain::range(5))
+    for (auto i : swt::brain::range(5))
     {
-        swt::CPPBrainx<int>::print({i});
+        swt::brainx<int>::print({i});
     }
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
 
     // *** This line *** //
-    for (auto i : swt::CPPBrain::range(2020, 2030, 2))
+    for (auto i : swt::brain::range(2020, 2030, 2))
     {
-        swt::CPPBrainx<int>::print({ i });
+        swt::brainx<int>::print({ i });
     }
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'loop' and 'loop_index': (EG-002) */
-    swt::CPPBrain::print({ "-Example of 'loop' and 'loop_index': (EG-002)" });
+    swt::brain::print({ "-Example of 'loop' and 'loop_index': (EG-002)" });
 
     int i = 5;
     // *** This line *** //
-    while (swt::CPPBrain::loop(i))
+    while (swt::brain::loop(i))
     {
         // 4, 3, 2, 1, 0
-        printf("Loop index: %d\n", swt::CPPBrain::loop_index(i));
+        printf("Loop index: %d\n", swt::brain::loop_index(i));
     }
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'loop_to' and 'loop_index': (EG-003) */
-    swt::CPPBrain::print({ "-Example of 'loop_to' and 'loop_index': (EG-003)" });
+    swt::brain::print({ "-Example of 'loop_to' and 'loop_index': (EG-003)" });
 
     i = 0;
     // *** This line *** //
-    while (swt::CPPBrain::loop_to(i, 5))
+    while (swt::brain::loop_to(i, 5))
     {
         // 0, 1, 2, 3, 4
-        printf("Loop index: %d\n", swt::CPPBrain::loop_index(i, 5));
+        printf("Loop index: %d\n", swt::brain::loop_index(i, 5));
     }
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'loop_to_by' and 'loop_index': (EG-004) */
-    swt::CPPBrain::print({ "-Example of 'loop_to_by' and 'loop_index': (EG-004)" });
+    swt::brain::print({ "-Example of 'loop_to_by' and 'loop_index': (EG-004)" });
 
     i = 0;
     // *** This line *** //
-    while (swt::CPPBrain::loop_to_by(i, 10, 2))
+    while (swt::brain::loop_to_by(i, 10, 2))
     {
         // 0, 1, 2, 3, 4
-        printf("Loop index: %d\n", swt::CPPBrain::loop_index(i, 10, 2));
+        printf("Loop index: %d\n", swt::brain::loop_index(i, 10, 2));
     }
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
 
     i = 10;
     // *** This line *** //
-    while (swt::CPPBrain::loop_to_by(i, 0, -2))
+    while (swt::brain::loop_to_by(i, 0, -2))
     {
         // 4, 3, 2, 1, 0
-        printf("Loop index: %d\n", swt::CPPBrain::loop_index(i, 0, -2));
+        printf("Loop index: %d\n", swt::brain::loop_index(i, 0, -2));
     }
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'print' and 'print_return': (EG-005) */
-    swt::CPPBrain::print({ "-Example of 'print' and 'print_return': (EG-005)" });
+    swt::brain::print({ "-Example of 'print' and 'print_return': (EG-005)" });
 
-    swt::CPPBrainx<std::string>::print({ "My", "name", "is", "bad-temper."}, " ");
+    swt::brainx<std::string>::print({ "My", "name", "is", "bad-temper."}, " ");
 
-    swt::CPPBrainx<int>::print({ 2, 0, 2, 4, 0, 8, 1, 5 });
+    swt::brainx<int>::print({ 2, 0, 2, 4, 0, 8, 1, 5 });
 
     std::vector<int> vec2 = { 0, 1, 2, 3, 4, 5 };
-    swt::CPPBrainx<int>::print(vec2);
+    swt::brainx<int>::print(vec2);
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'push_strings': (EG-006) */
-    swt::CPPBrain::print({ "-Example of 'push_strings': (EG-006)" });
+    swt::brain::print({ "-Example of 'push_strings': (EG-006)" });
 
     std::vector<std::string> cats;
     // *** This line *** //
-    swt::CPPBrain::push_strings(cats, {"Lulu", "Momo", "Fortune", "Rocky", "Scars"});
+    swt::brain::push_strings(cats, {"Lulu", "Momo", "Fortune", "Rocky", "Scars"});
 
     for (auto cat : cats)
     {
-        swt::CPPBrain::print({cat});
+        swt::brain::print({cat});
     }
 
-    swt::CPPBrain::print_return(2);
+    swt::brain::print_return(2);
     
     
 
-    /* # Module # - CPPBrainx */
-    swt::CPPBrain::print({ "# Module #", "CPPBrainx" }, " - ");
-    swt::CPPBrain::print_return();
+    /* # Module # - brainx */
+    swt::brain::print({ "# Module #", "brainx" }, " - ");
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'delete_elements': (EGX-001) */
-    swt::CPPBrain::print({ "-Example of 'delete_elements': (EGX-001)"});
+    swt::brain::print({ "-Example of 'delete_elements': (EGX-001)"});
 
     std::set<int> set1 = { 2024, 2025, 2026, 2027, 2028 };
     // *** This line *** //
-    swt::CPPBrainx<int>::delete_elements(set1, { 2025, 2027 });
-    swt::CPPBrainx<int>::print(set1);
+    swt::brainx<int>::delete_elements(set1, { 2025, 2027 });
+    swt::brainx<int>::print(set1);
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'delete_elements_by_indices': (EGX-002) */
-    swt::CPPBrain::print({ "-Example of 'delete_elements_by_indices': (EGX-002)", "No outputs" }, " ");
+    swt::brain::print({ "-Example of 'delete_elements_by_indices': (EGX-002)", "No outputs" }, " ");
 
     class City {};
     class Montreal : public City {};
@@ -165,122 +165,122 @@ int main()
 
     std::list<City*> list1 = { new Montreal , new Guangzhou , new Seattle };
     // *** This line *** //
-    std::vector<City*> deleted1 = swt::CPPBrainx<City*>::delete_elements_by_indices(list1, { 1 }, true);
-    swt::CPPBrainx<City*>::release(deleted1);
-    swt::CPPBrainx<City*>::release(list1);
+    std::vector<City*> deleted1 = swt::brainx<City*>::delete_elements_by_indices(list1, { 1 }, true);
+    swt::brainx<City*>::release(deleted1);
+    swt::brainx<City*>::release(list1);
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'map': (EGX-002-001) */
-    swt::CPPBrain::print({ "-Example of 'map': (EGX-002-001)" });
+    swt::brain::print({ "-Example of 'map': (EGX-002-001)" });
 
     // *** This line *** //
-    std::vector<float> areas = swt::CPPBrainx<float>::map({ 1.0f, 2.0f, 4.0f, 8.0f, 16.0f }, [](float radius) {
+    std::vector<float> areas = swt::brainx<float>::map({ 1.0f, 2.0f, 4.0f, 8.0f, 16.0f }, [](float radius) {
             // Calculate the area of a circle from its radius
             return 3.1415926f * radius * radius;
         });
 
-    swt::CPPBrainx<float>::print(areas);
-    swt::CPPBrain::print_return();
+    swt::brainx<float>::print(areas);
+    swt::brain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'to_vector': (EGX-003) */
-    swt::CPPBrain::print({ "-Example of 'to_vector': (EGX-003)" });
+    swt::brain::print({ "-Example of 'to_vector': (EGX-003)" });
 
     std::set<float> set2 = { 2024.01f, 2025.02f, 2026.03f, 2027.04f, 2028.05f };
     // *** This line *** //
-    std::vector<float> vec3 = swt::CPPBrainx<float>::to_vector(set2);
-    swt::CPPBrainx<float>::print(vec3);
+    std::vector<float> vec3 = swt::brainx<float>::to_vector(set2);
+    swt::brainx<float>::print(vec3);
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'sum': (EGX-004) */
-    swt::CPPBrain::print({ "-Example of 'sum': (EGX-004)" });
+    swt::brain::print({ "-Example of 'sum': (EGX-004)" });
 
     // *** This line *** //
-    int sum1 = swt::CPPBrainx<int>::sum({ 1, 2, 3, 4, 5, 6 });
+    int sum1 = swt::brainx<int>::sum({ 1, 2, 3, 4, 5, 6 });
 
     std::vector<float> inputs1 = { 1.1f, 2.2f, 3.3f, 4.4f, 5.5f, 6.6f };
     // *** This line *** //
-    float sum2 = swt::CPPBrainx<float>::sum(inputs1);
+    float sum2 = swt::brainx<float>::sum(inputs1);
 
-    swt::CPPBrain::print({ swt::CPPBrainx<int>::to_string(sum1), swt::CPPBrainx<float>::to_string(sum2) });
-    swt::CPPBrain::print_return();
+    swt::brain::print({ swt::brainx<int>::to_string(sum1), swt::brainx<float>::to_string(sum2) });
+    swt::brain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'in_range_e', 'in_range_i', 'in_range_e_i', 'in_range_i_e': (EGX-004-001) */
-    swt::CPPBrain::print({ "-Example of 'in_range_e', 'in_range_i', 'in_range_e_i', 'in_range_i_e': (EGX-004-001)" });
+    swt::brain::print({ "-Example of 'in_range_e', 'in_range_i', 'in_range_e_i', 'in_range_i_e': (EGX-004-001)" });
 
     const int fiscal_year = 2024;
     // *** This line *** //
-    const bool is_young = swt::CPPBrainx<int>::in_range_e_i(fiscal_year - 1989, 0, 100);
+    const bool is_young = swt::brainx<int>::in_range_e_i(fiscal_year - 1989, 0, 100);
 
     if (is_young)
     {
-        swt::CPPBrain::print({ "Taylor is young in ",  swt::CPPBrainx<int>::to_string(fiscal_year), "."}, "");
+        swt::brain::print({ "Taylor is young in ",  swt::brainx<int>::to_string(fiscal_year), "."}, "");
     }
     else
     {
-        swt::CPPBrain::print({ "Taylor is not old in ",  swt::CPPBrainx<int>::to_string(fiscal_year), "."}, "");
+        swt::brain::print({ "Taylor is not old in ",  swt::brainx<int>::to_string(fiscal_year), "."}, "");
     }
     
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'join': (EGX-005) */
-    swt::CPPBrain::print({ "-Example of 'join': (EGX-005)" });
+    swt::brain::print({ "-Example of 'join': (EGX-005)" });
 
     std::vector<int> vec4 = {123, 234, 345, 456, 567};
     // *** This line *** //
-    std::string t1 = swt::CPPBrainx<int>::join(vec4, "-");
-    swt::CPPBrain::print({ t1 });
+    std::string t1 = swt::brainx<int>::join(vec4, "-");
+    swt::brain::print({ t1 });
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
 
     /* --------------------------------------- */
     /* Example of 'clamp': (EGX-005-001) */
-    swt::CPPBrain::print({ "-Example of 'clamp': (EGX-005-001)" });
+    swt::brain::print({ "-Example of 'clamp': (EGX-005-001)" });
 
     // *** This line *** //
-    float clamped = swt::CPPBrainx<float>::clamp((float)2025.1224, (float)2024.0214, (float)2024.0501);
-    swt::CPPBrainx<float>::print({ clamped });
+    float clamped = swt::brainx<float>::clamp((float)2025.1224, (float)2024.0214, (float)2024.0501);
+    swt::brainx<float>::print({ clamped });
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'to_string': (EGX-006) */
-    swt::CPPBrain::print({ "-Example of 'to_string': (EGX-006)" });
+    swt::brain::print({ "-Example of 'to_string': (EGX-006)" });
 
     // *** This line *** //
-    std::string t2 = swt::CPPBrainx<double>::to_string(0.123456);
-    swt::CPPBrain::print({ t2 });
+    std::string t2 = swt::brainx<double>::to_string(0.123456);
+    swt::brain::print({ t2 });
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'to_type': (EGX-007) */
-    swt::CPPBrain::print({ "-Example of 'to_type': (EGX-007)" });
+    swt::brain::print({ "-Example of 'to_type': (EGX-007)" });
 
     // *** This line *** //
-    std::string t3 = swt::CPPBrainx<double>::to_type(0.123456);
-    swt::CPPBrain::print({ t3 });
+    std::string t3 = swt::brainx<double>::to_type(0.123456);
+    swt::brain::print({ t3 });
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'if_true', 'if_false', 'if_null', 'if_nullptr': (EGX-007-001) */
-    swt::CPPBrain::print({ "-Example of 'if_true': (EGX-007-001)" });
+    swt::brain::print({ "-Example of 'if_true': (EGX-007-001)" });
 
     class Gates
     {
         public:
         void Clear(const char* target)
         {
-            swt::CPPBrain::print({ "Done with ", target, "!" }, "");
+            swt::brain::print({ "Done with ", target, "!" }, "");
         }
         std::string With()
         {
@@ -290,56 +290,56 @@ int main()
 
     Gates* william = new Gates;
     // *** This line *** //
-    swt::CPPBrainx<Gates*>::if_true(william, [](Gates* bill) {
+    swt::brainx<Gates*>::if_true(william, [](Gates* bill) {
             bill->Clear("Mosquitoes");
         });
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
 
     /* ----------------------------- */
 
     Gates* daughter = nullptr;
     // *** This line *** //
-    std::string method1 = swt::CPPBrainxx<Gates*, std::string>::if_false(william, [](Gates* bill) {
+    std::string method1 = swt::brainxx<Gates*, std::string>::if_false(william, [](Gates* bill) {
             return std::string("net");
         }, william->With());
 
     // *** This line *** //
-    std::string method2 = swt::CPPBrainxx<Gates*, std::string>::if_nullptr(daughter, [](Gates* phoebe) {
+    std::string method2 = swt::brainxx<Gates*, std::string>::if_nullptr(daughter, [](Gates* phoebe) {
             return std::string("texting dad");
         }, "emailing dad");
 
-    swt::CPPBrain::print({ "He utilises ", method1, ", ", "while she utilises ", method2, " to clear mosquitoes." }, "");
+    swt::brain::print({ "He utilises ", method1, ", ", "while she utilises ", method2, " to clear mosquitoes." }, "");
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     /* --------------------------------------- */
     /* Example of 'print': (EGX-008) */
-    swt::CPPBrain::print({ "-Example of 'print': (EGX-008)" });
+    swt::brain::print({ "-Example of 'print': (EGX-008)" });
 
     std::list<int> list2 = {200, 201, 202, 203, 204};
     // *** This line *** //
-    swt::CPPBrainx<int>::print(list2);
+    swt::brainx<int>::print(list2);
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'push_elements': (EGX-009) */
-    swt::CPPBrain::print({ "-Example of 'push_elements': (EGX-009)" });
+    swt::brain::print({ "-Example of 'push_elements': (EGX-009)" });
 
     std::vector<float> vec5;
     // *** This line *** //
-    swt::CPPBrainx<float>::push_elements(vec5, { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f });
+    swt::brainx<float>::push_elements(vec5, { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f });
 
-    swt::CPPBrainx<float>::print(vec5);
+    swt::brainx<float>::print(vec5);
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'release' and 'release_arr': (EGX-010) */
-    swt::CPPBrain::print({ "-Example of 'release' and 'release_arr': (EGX-010)" });
+    swt::brain::print({ "-Example of 'release' and 'release_arr': (EGX-010)" });
 
     class Kirkland {};
     class Shanghai {};
@@ -349,31 +349,31 @@ int main()
     Macau* casinos = new Macau[6];
     std::vector<Shanghai*> crabs = {new Shanghai, new Shanghai, new Shanghai};
     // *** These lines *** //
-    swt::CPPBrainx<Kirkland*>::release(city1);
-    swt::CPPBrainx<Shanghai*>::release(city2);
-    swt::CPPBrainx<Macau*>::release_arr(casinos);
-    swt::CPPBrainx<Shanghai*>::release(crabs);
+    swt::brainx<Kirkland*>::release(city1);
+    swt::brainx<Shanghai*>::release(city2);
+    swt::brainx<Macau*>::release_arr(casinos);
+    swt::brainx<Shanghai*>::release(crabs);
 
     // Pointers to integer to print out if they are released
-    swt::CPPBrainx<long long>::print({(long long)city1, (long long)city2, (long long)casinos, (long long)crabs.size()});
-    swt::CPPBrain::print_return(2);
+    swt::brainx<long long>::print({(long long)city1, (long long)city2, (long long)casinos, (long long)crabs.size()});
+    swt::brain::print_return(2);
     
     
 
-    /* # Module # - CPPBrainxx */
-    swt::CPPBrain::print({ "# Module #", "CPPBrainxx" }, " - ");
-    swt::CPPBrain::print_return();
+    /* # Module # - brainxx */
+    swt::brain::print({ "# Module #", "brainxx" }, " - ");
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'keys' and 'values': (EGXX-001) */
-    swt::CPPBrain::print({ "-Example of 'keys' and 'values': (EGXX-001)" });
+    swt::brain::print({ "-Example of 'keys' and 'values': (EGXX-001)" });
 
     class Vancouver
     {
     public:
         Vancouver(int year) { m_year = year; }
-        void check() { swt::CPPBrainx<int>::print({ m_year }); }
+        void check() { swt::brainx<int>::print({ m_year }); }
 
     private:
         int m_year = 2024;
@@ -382,50 +382,50 @@ int main()
 
     // Creat a std::map
     std::map<int, Vancouver*> map1;
-    swt::CPPBrainxx<int, Vancouver*>::push_elements(map1, { 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029 },
+    swt::brainxx<int, Vancouver*>::push_elements(map1, { 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029 },
         { new Vancouver(2020), new Vancouver(2021) , new Vancouver(2022) , new Vancouver(2023) , new Vancouver(2024) ,
           new Vancouver(2025), new Vancouver(2026) , new Vancouver(2027) , new Vancouver(2028) , new Vancouver(2029) });
 
     // *** This line *** //
-    std::vector<int> keys1 = swt::CPPBrainxx<int, Vancouver*>::keys(map1);
+    std::vector<int> keys1 = swt::brainxx<int, Vancouver*>::keys(map1);
     // *** This line *** //
-    std::vector<Vancouver*> vals1 = swt::CPPBrainxx<int, Vancouver*>::values(map1);
+    std::vector<Vancouver*> vals1 = swt::brainxx<int, Vancouver*>::values(map1);
 
-    swt::CPPBrainx<int>::print(keys1);
+    swt::brainx<int>::print(keys1);
 
     for (auto val : vals1)
     {
         val->check();
     }
     // Release memory
-    swt::CPPBrainx<Vancouver*>::release(vals1);
+    swt::brainx<Vancouver*>::release(vals1);
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'delete_elements' and 'delete_elements_by_indices': (EGXX-002) */
-    swt::CPPBrain::print({ "-Example of 'delete_elements' and 'delete_elements_by_indices': (EGXX-002)" });
+    swt::brain::print({ "-Example of 'delete_elements' and 'delete_elements_by_indices': (EGXX-002)" });
 
-    swt::CPPBrain::print({ "Please reference the example of: (EGX-001) and (EGX-002)" });
+    swt::brain::print({ "Please reference the example of: (EGX-001) and (EGX-002)" });
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'push_elements': (EGXX-003) */
-    swt::CPPBrain::print({ "-Example of 'push_elements': (EGXX-003)" });
+    swt::brain::print({ "-Example of 'push_elements': (EGXX-003)" });
 
-    swt::CPPBrain::print({ "Please reference the example of: (EGXX-001)" });
+    swt::brain::print({ "Please reference the example of: (EGXX-001)" });
 
-    swt::CPPBrain::print_return();
+    swt::brain::print_return();
     
     
     /* --------------------------------------- */
     /* Example of 'version': (EGXX-005) */
-    swt::CPPBrain::print({ "-Example of 'version': (EGXX-005)" });
+    swt::brain::print({ "-Example of 'version': (EGXX-005)" });
 
     // *** This line *** //
-    swt::CPPBrain::version();
-    swt::CPPBrain::print_return();
+    swt::brain::version();
+    swt::brain::print_return();
 }

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['make_20your_20life_20longer_0',['CPP-BRAIN: Convenient C++ APIs to make your life longer',['../index.html',1,'']]],
-  ['map_1',['map',['../classswt_1_1_c_p_p_brainx.html#a63a80f42e9edb6f7821dcd414fda5004',1,'swt::CPPBrainx']]],
+  ['map_1',['map',['../classswt_1_1brainx.html#a1c7a2b5c40627e4aa3f34d37e209f091',1,'swt::brainx']]],
   ['map_20function_3a_2',['Example 6, ONE line of array processing, mimic JavaScript&apos;s map Function:',['../index.html#autotoc_md6',1,'']]],
   ['memory_20release_3a_3',['Example 5, Container&apos;s multi-elements deletion and memory release:',['../index.html#autotoc_md5',1,'']]],
   ['mimic_20javascript_20s_20map_20function_3a_4',['Example 6, ONE line of array processing, mimic JavaScript&apos;s map Function:',['../index.html#autotoc_md6',1,'']]],

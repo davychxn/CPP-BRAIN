@@ -19,7 +19,7 @@
 namespace swt
 {
     template <typename T>
-    class CPPBrainx
+    class brainx
     {
     public:
         /**
@@ -136,7 +136,7 @@ namespace swt
          */
         static void release_arr(T& resource);
         /**
-         * @brief Print Help information of module 'swt::CPPBrainx' to console.
+         * @brief Print Help information of module 'swt::brainx' to console.
          */
         static void help();
         /**
@@ -153,7 +153,7 @@ namespace swt
     };
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::delete_elements(std::vector<T>& source, std::vector<T> elements, bool is_return_deleted)
+    std::vector<T> brainx<T>::delete_elements(std::vector<T>& source, std::vector<T> elements, bool is_return_deleted)
     {
         std::vector<T> deleted;
 
@@ -174,7 +174,7 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::delete_elements(std::vector<T>& source, std::initializer_list<T> elements, bool is_return_deleted)
+    std::vector<T> brainx<T>::delete_elements(std::vector<T>& source, std::initializer_list<T> elements, bool is_return_deleted)
     {
         std::vector<T> deleted;
 
@@ -195,7 +195,7 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::delete_elements_by_indices(std::vector<T>& source, std::vector<size_t> indices, bool is_return_deleted)
+    std::vector<T> brainx<T>::delete_elements_by_indices(std::vector<T>& source, std::vector<size_t> indices, bool is_return_deleted)
     {
         std::vector<T> deleted;
 
@@ -220,14 +220,14 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::delete_elements_by_indices(std::vector<T>& source, std::initializer_list<size_t> indices, bool is_return_deleted)
+    std::vector<T> brainx<T>::delete_elements_by_indices(std::vector<T>& source, std::initializer_list<size_t> indices, bool is_return_deleted)
     {
-        std::vector<size_t> indices1 = CPPBrainx<size_t>::to_vector(indices);
+        std::vector<size_t> indices1 = brainx<size_t>::to_vector(indices);
         return delete_elements_by_indices(source, indices1, is_return_deleted);
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::delete_elements(std::list<T>& source, std::vector<T> elements, bool is_return_deleted)
+    std::vector<T> brainx<T>::delete_elements(std::list<T>& source, std::vector<T> elements, bool is_return_deleted)
     {
         std::vector<T> deleted;
 
@@ -248,7 +248,7 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::delete_elements(std::list<T>& source, std::initializer_list<T> elements, bool is_return_deleted)
+    std::vector<T> brainx<T>::delete_elements(std::list<T>& source, std::initializer_list<T> elements, bool is_return_deleted)
     {
         std::vector<T> deleted;
 
@@ -269,7 +269,7 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::delete_elements_by_indices(std::list<T>& source, std::vector<size_t> indices, bool is_return_deleted)
+    std::vector<T> brainx<T>::delete_elements_by_indices(std::list<T>& source, std::vector<size_t> indices, bool is_return_deleted)
     {
         std::vector<T> deleted;
 
@@ -294,14 +294,14 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::delete_elements_by_indices(std::list<T>& source, std::initializer_list<size_t> indices, bool is_return_deleted)
+    std::vector<T> brainx<T>::delete_elements_by_indices(std::list<T>& source, std::initializer_list<size_t> indices, bool is_return_deleted)
     {
-        std::vector<size_t> indices1 = CPPBrainx<size_t>::to_vector(indices);
+        std::vector<size_t> indices1 = brainx<size_t>::to_vector(indices);
         return delete_elements_by_indices(source, indices1, is_return_deleted);
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::delete_elements(std::set<T>& source, std::vector<T> elements, bool is_return_deleted)
+    std::vector<T> brainx<T>::delete_elements(std::set<T>& source, std::vector<T> elements, bool is_return_deleted)
     {
         std::vector<T> deleted;
 
@@ -322,7 +322,7 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::delete_elements(std::set<T>& source, std::initializer_list<T> elements, bool is_return_deleted)
+    std::vector<T> brainx<T>::delete_elements(std::set<T>& source, std::initializer_list<T> elements, bool is_return_deleted)
     {
         std::vector<T> deleted;
 
@@ -343,7 +343,7 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::delete_elements_by_indices(std::set<T>& source, std::vector<size_t> indices, bool is_return_deleted)
+    std::vector<T> brainx<T>::delete_elements_by_indices(std::set<T>& source, std::vector<size_t> indices, bool is_return_deleted)
     {
         std::vector<T> deleted;
 
@@ -368,14 +368,14 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::delete_elements_by_indices(std::set<T>& source, std::initializer_list<size_t> indices, bool is_return_deleted)
+    std::vector<T> brainx<T>::delete_elements_by_indices(std::set<T>& source, std::initializer_list<size_t> indices, bool is_return_deleted)
     {
-        std::vector<size_t> indices1 = CPPBrainx<size_t>::to_vector(indices);
+        std::vector<size_t> indices1 = brainx<size_t>::to_vector(indices);
         return delete_elements_by_indices(source, indices1, is_return_deleted);
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::to_vector(const std::list<T>& source)
+    std::vector<T> brainx<T>::to_vector(const std::list<T>& source)
     {
         std::vector<T> v1;
 
@@ -388,7 +388,7 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::map(const std::vector<T>& source, T (*map_func)(T))
+    std::vector<T> brainx<T>::map(const std::vector<T>& source, T (*map_func)(T))
     {
         std::vector<T> v1;
 
@@ -402,7 +402,7 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::map(const std::list<T>& source, T (*map_func)(T))
+    std::vector<T> brainx<T>::map(const std::list<T>& source, T (*map_func)(T))
     {
         std::vector<T> v1;
 
@@ -416,7 +416,7 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::map(const std::set<T>& source, T (*map_func)(T))
+    std::vector<T> brainx<T>::map(const std::set<T>& source, T (*map_func)(T))
     {
         std::vector<T> v1;
 
@@ -430,7 +430,7 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::map(const std::initializer_list<T>& source, T (*map_func)(T))
+    std::vector<T> brainx<T>::map(const std::initializer_list<T>& source, T (*map_func)(T))
     {
         std::vector<T> v1;
 
@@ -444,7 +444,7 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::to_vector(const std::set<T>& source)
+    std::vector<T> brainx<T>::to_vector(const std::set<T>& source)
     {
         std::vector<T> v1;
 
@@ -457,7 +457,7 @@ namespace swt
     }
 
     template <typename T>
-    std::vector<T> CPPBrainx<T>::to_vector(const std::initializer_list<T>& source)
+    std::vector<T> brainx<T>::to_vector(const std::initializer_list<T>& source)
     {
         std::vector<T> v1;
 
@@ -470,7 +470,7 @@ namespace swt
     }
 
     template <typename T>
-    T CPPBrainx<T>::sum(const std::initializer_list<T>& args)
+    T brainx<T>::sum(const std::initializer_list<T>& args)
     {
         if (args.size() == 0)
         {
@@ -487,7 +487,7 @@ namespace swt
     }
 
     template <typename T>
-    T CPPBrainx<T>::sum(const std::vector<T>& args)
+    T brainx<T>::sum(const std::vector<T>& args)
     {
         if (args.size() == 0)
         {
@@ -504,7 +504,7 @@ namespace swt
     }
 
     template <typename T>
-    T CPPBrainx<T>::sum(const std::list<T>& args)
+    T brainx<T>::sum(const std::list<T>& args)
     {
         if (args.size() == 0)
         {
@@ -521,7 +521,7 @@ namespace swt
     }
 
     template <typename T>
-    T CPPBrainx<T>::sum(const std::set<T>& args)
+    T brainx<T>::sum(const std::set<T>& args)
     {
         if (args.size() == 0)
         {
@@ -538,7 +538,7 @@ namespace swt
     }
 
     template <typename T>
-    T CPPBrainx<T>::clamp(const T value, const T range_end1, const T range_end2)
+    T brainx<T>::clamp(const T value, const T range_end1, const T range_end2)
     {
         T range_left = std::min(range_end1, range_end2);
         T range_right = std::max(range_end1, range_end2);
@@ -549,7 +549,7 @@ namespace swt
     }
 
     template <typename T>
-    bool CPPBrainx<T>::in_range_e(const T value, const T range_end1, const T range_end2)
+    bool brainx<T>::in_range_e(const T value, const T range_end1, const T range_end2)
     {
         T range_left = std::min(range_end1, range_end2);
         T range_right = std::max(range_end1, range_end2);
@@ -558,7 +558,7 @@ namespace swt
     }
 
     template <typename T>
-    bool CPPBrainx<T>::in_range_i(const T value, const T range_end1, const T range_end2)
+    bool brainx<T>::in_range_i(const T value, const T range_end1, const T range_end2)
     {
         T range_left = std::min(range_end1, range_end2);
         T range_right = std::max(range_end1, range_end2);
@@ -567,7 +567,7 @@ namespace swt
     }
 
     template <typename T>
-    bool CPPBrainx<T>::in_range_e_i(const T value, const T range_left, const T range_right)
+    bool brainx<T>::in_range_e_i(const T value, const T range_left, const T range_right)
     {
         if (range_left > range_right)
         {
@@ -578,7 +578,7 @@ namespace swt
     }
 
     template <typename T>
-    bool CPPBrainx<T>::in_range_i_e(const T value, const T range_left, const T range_right)
+    bool brainx<T>::in_range_i_e(const T value, const T range_left, const T range_right)
     {
         if (range_left > range_right)
         {
@@ -589,7 +589,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::if_true(const T value, void (*custom_func)(T value))
+    void brainx<T>::if_true(const T value, void (*custom_func)(T value))
     {
         if (value)
         {
@@ -598,7 +598,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::if_false(const T value, void (*custom_func)(T value))
+    void brainx<T>::if_false(const T value, void (*custom_func)(T value))
     {
         if (!value)
         {
@@ -607,7 +607,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::if_null(const T value, void (*custom_func)(T value))
+    void brainx<T>::if_null(const T value, void (*custom_func)(T value))
     {
         if (value == NULL)
         {
@@ -616,7 +616,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::if_nullptr(const T value, void (*custom_func)(T value))
+    void brainx<T>::if_nullptr(const T value, void (*custom_func)(T value))
     {
         if (value == nullptr)
         {
@@ -625,7 +625,7 @@ namespace swt
     }
 
     template <typename T>
-    std::string CPPBrainx<T>::join(const std::vector<T>& values, const char* delimiter)
+    std::string brainx<T>::join(const std::vector<T>& values, const char* delimiter)
     {
         std::vector<std::string> v1;
 
@@ -639,21 +639,21 @@ namespace swt
     }
 
     template <typename T>
-    std::string CPPBrainx<T>::join(const std::list<T>& values, const char* delimiter)
+    std::string brainx<T>::join(const std::list<T>& values, const char* delimiter)
     {
-        std::vector<T> v1 = CPPBrainx<T>::to_vector(values);
+        std::vector<T> v1 = brainx<T>::to_vector(values);
         return join(v1, delimiter);
     }
 
     template <typename T>
-    std::string CPPBrainx<T>::join(const std::set<T>& values, const char* delimiter)
+    std::string brainx<T>::join(const std::set<T>& values, const char* delimiter)
     {
-        std::vector<T> v1 = CPPBrainx<T>::to_vector(values);
+        std::vector<T> v1 = brainx<T>::to_vector(values);
         return join(v1, delimiter);
     }
 
     template <typename T>
-    std::string CPPBrainx<T>::to_string(T value)
+    std::string brainx<T>::to_string(T value)
     {
         std::stringstream buffer;
         buffer << value;
@@ -661,14 +661,14 @@ namespace swt
     }
 
     template <typename T>
-    std::string CPPBrainx<T>::to_type(T value)
+    std::string brainx<T>::to_type(T value)
     {
         std::string t1 = typeid(T).name();
         return t1;
     }
 
     template <typename T>
-    void CPPBrainx<T>::print(const std::vector<T>& values, const char* delimiter)
+    void brainx<T>::print(const std::vector<T>& values, const char* delimiter)
     {
         bool isFirst = true;
 
@@ -682,7 +682,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::print(const std::list<T>& values, const char* delimiter)
+    void brainx<T>::print(const std::list<T>& values, const char* delimiter)
     {
         bool isFirst = true;
 
@@ -696,7 +696,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::print(const std::set<T>& values, const char* delimiter)
+    void brainx<T>::print(const std::set<T>& values, const char* delimiter)
     {
         bool isFirst = true;
 
@@ -710,7 +710,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::print(const std::initializer_list<T>& values, const char* delimiter)
+    void brainx<T>::print(const std::initializer_list<T>& values, const char* delimiter)
     {
         bool isFirst = true;
 
@@ -724,7 +724,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::push_elements(std::vector<T>& dest, std::initializer_list<T> elements)
+    void brainx<T>::push_elements(std::vector<T>& dest, std::initializer_list<T> elements)
     {
         for (auto element: elements)
         {
@@ -733,7 +733,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::push_elements(std::list<T>& dest, std::initializer_list<T> elements)
+    void brainx<T>::push_elements(std::list<T>& dest, std::initializer_list<T> elements)
     {
         for (auto element: elements)
         {
@@ -742,7 +742,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::push_elements(std::set<T>& dest, std::initializer_list<T> elements)
+    void brainx<T>::push_elements(std::set<T>& dest, std::initializer_list<T> elements)
     {
         for (auto element: elements)
         {
@@ -751,7 +751,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::release(T& resource)
+    void brainx<T>::release(T& resource)
     {
         if (resource)
         {
@@ -761,7 +761,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::release(std::vector<T>& resource)
+    void brainx<T>::release(std::vector<T>& resource)
     {
         for (auto ref: resource)
         {
@@ -775,7 +775,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::release(std::list<T>& resource)
+    void brainx<T>::release(std::list<T>& resource)
     {
         for (auto ref: resource)
         {
@@ -789,7 +789,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::release(std::set<T>& resource)
+    void brainx<T>::release(std::set<T>& resource)
     {
         for (auto ref: resource)
         {
@@ -803,7 +803,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::release(std::initializer_list<T>& resource)
+    void brainx<T>::release(std::initializer_list<T>& resource)
     {
         for (auto ref: resource)
         {
@@ -817,7 +817,7 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::release_arr(T& resource)
+    void brainx<T>::release_arr(T& resource)
     {
         if (resource)
         {
@@ -827,19 +827,19 @@ namespace swt
     }
 
     template <typename T>
-    void CPPBrainx<T>::help()
+    void brainx<T>::help()
     {
         DataManager::help_x();
     }
 
     template <typename T>
-    void CPPBrainx<T>::version()
+    void brainx<T>::version()
     {
         DataManager::version();
     }
 
     template <typename T>
-    void CPPBrainx<T>::print_function1(T value, const char* delimiter, bool is_first)
+    void brainx<T>::print_function1(T value, const char* delimiter, bool is_first)
     {
         if (!is_first)
         {

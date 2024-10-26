@@ -88,7 +88,7 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__c_p_p-_b_r_a_i_n_2_r_e_a_d_m_e"></a></p>
-<p>CPP-BRAIN C++ library consists of modules of <code><a class="el" href="classswt_1_1_c_p_p_brain.html">swt::CPPBrain</a></code>, <code><a class="el" href="classswt_1_1_c_p_p_brainx.html">swt::CPPBrainx</a></code> and <code><a class="el" href="classswt_1_1_c_p_p_brainxx.html">swt::CPPBrainxx</a></code></p>
+<p>CPP-BRAIN C++ library consists of modules of <code>swt::CPPBrain</code>, <code>swt::CPPBrainx</code> and <code>swt::CPPBrainxx</code></p>
 <p>-Created by Davy Chen, Since August 8th, 2020, In the hot weather of Guangzhou</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Example 1, ONE line of pointer release:</h1>
@@ -96,8 +96,7 @@ Example 1, ONE line of pointer release:</h1>
 <div class="line"> </div>
 <div class="line">Shanghai* city1 = <span class="keyword">new</span> Shanghai;</div>
 <div class="line"><span class="comment">// This line</span></div>
-<div class="line"><a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#a96cd3020068a97c346e1422e593db728">swt::CPPBrainx&lt;Shanghai*&gt;::release</a>(city1);</div>
-<div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_a96cd3020068a97c346e1422e593db728"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#a96cd3020068a97c346e1422e593db728">swt::CPPBrainx::release</a></div><div class="ttdeci">static void release(T &amp;resource)</div><div class="ttdoc">Release undetermined type of memory resource(a single pointer or undetermined counts in a container) ...</div><div class="ttdef"><b>Definition</b> cppbrainx.h:754</div></div>
+<div class="line">swt::CPPBrainx&lt;Shanghai*&gt;::release(city1);</div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (city1)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">delete</span> city1;</div>
@@ -105,8 +104,7 @@ Example 1, ONE line of pointer release:</h1>
 <div class="line">}</div>
 </div><!-- fragment --><p> Use: </p><div class="fragment"><div class="line">Kirkland* cities = <span class="keyword">new</span> Kirkland[5];</div>
 <div class="line"><span class="comment">// This line</span></div>
-<div class="line"><a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#a6ef7226c6c638e4c758cbe5269761e58">swt::CPPBrainx&lt;Kirkland*&gt;::release_arr</a>(cities);</div>
-<div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_a6ef7226c6c638e4c758cbe5269761e58"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#a6ef7226c6c638e4c758cbe5269761e58">swt::CPPBrainx::release_arr</a></div><div class="ttdeci">static void release_arr(T &amp;resource)</div><div class="ttdoc">Release undetermined type memory resource array allocated by new [].</div><div class="ttdef"><b>Definition</b> cppbrainx.h:820</div></div>
+<div class="line">swt::CPPBrainx&lt;Kirkland*&gt;::release_arr(cities);</div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (cities)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">delete</span> [] cities;</div>
@@ -115,16 +113,14 @@ Example 1, ONE line of pointer release:</h1>
 </div><!-- fragment --> <h1><a class="anchor" id="autotoc_md2"></a>
 Example 2, Simplified loop condition, mimic Python's range:</h1>
 <p>Use: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> i = 5;</div>
-<div class="line"><span class="keywordflow">while</span> (<a class="code hl_function" href="classswt_1_1_common_components.html#a1869e7db51d241a0cac8cf5ae74f1bee">swt::CPPBrain::loop</a>(i))</div>
+<div class="line"><span class="keywordflow">while</span> (swt::CPPBrain::loop(i))</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Do something 5 times, save your brain</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassswt_1_1_common_components_html_a1869e7db51d241a0cac8cf5ae74f1bee"><div class="ttname"><a href="classswt_1_1_common_components.html#a1869e7db51d241a0cac8cf5ae74f1bee">swt::CommonComponents::loop</a></div><div class="ttdeci">static bool loop(int &amp;index)</div><div class="ttdoc">Works with 'while' operator, guarantees assigned count of loops.</div><div class="ttdef"><b>Definition</b> common.h:160</div></div>
-</div><!-- fragment --><p> Or, use: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="classswt_1_1_common_components.html#a49823c421fc9c365f419d37f9c97b306">swt::CPPBrain::range</a>(5))</div>
+</div><!-- fragment --><p> Or, use: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span> i : swt::CPPBrain::range(5))</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Do something 5 times</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassswt_1_1_common_components_html_a49823c421fc9c365f419d37f9c97b306"><div class="ttname"><a href="classswt_1_1_common_components.html#a49823c421fc9c365f419d37f9c97b306">swt::CommonComponents::range</a></div><div class="ttdeci">static std::vector&lt; int &gt; range(const int stop)</div><div class="ttdoc">Return a continuous int array in a range.</div><div class="ttdef"><b>Definition</b> common.h:138</div></div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Do something 5 times</span></div>
@@ -133,24 +129,20 @@ Example 2, Simplified loop condition, mimic Python's range:</h1>
 Example 3, ONE line of string splitting and joining:</h1>
 <p>Use: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span>* names = <span class="stringliteral">&quot;Taylor Swift,Vivian Chow,Pace Wu,Gina Jin,,Jasmine Sun,Sophia Lu,En Chin,Cindy Fei Mok&quot;</span>;</div>
 <div class="line"><span class="comment">// This line</span></div>
-<div class="line">std::vector&lt;std::string&gt; giant_names = <a class="code hl_function" href="classswt_1_1_common_components.html#aa35813ac541608a9d80ee3cbeb9f336f">swt::CPPBrain::split</a>(names, <span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="ttc" id="aclassswt_1_1_common_components_html_aa35813ac541608a9d80ee3cbeb9f336f"><div class="ttname"><a href="classswt_1_1_common_components.html#aa35813ac541608a9d80ee3cbeb9f336f">swt::CommonComponents::split</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; split(const char *str, const char *delimiter)</div><div class="ttdoc">Return a strings array sliced from source string by a delimiter.</div><div class="ttdef"><b>Definition</b> common.h:92</div></div>
+<div class="line">std::vector&lt;std::string&gt; giant_names = swt::CPPBrain::split(names, <span class="stringliteral">&quot;,&quot;</span>);</div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine using C++</span></div>
 </div><!-- fragment --><p> Use: </p><div class="fragment"><div class="line">std::vector&lt;std::string&gt; giant_names = {<span class="stringliteral">&quot;Taylor Swift&quot;</span>, <span class="stringliteral">&quot;Vivian Chow&quot;</span>, <span class="stringliteral">&quot;Pace Wu&quot;</span>, <span class="stringliteral">&quot;Gina Jin&quot;</span>, <span class="stringliteral">&quot;Jasmine Sun&quot;</span>, <span class="stringliteral">&quot;Sophia Lu&quot;</span>, <span class="stringliteral">&quot;En Chin&quot;</span>, <span class="stringliteral">&quot;Cindy Fei Mok&quot;</span>};</div>
 <div class="line"><span class="comment">// This line</span></div>
-<div class="line">std::string giant_names_in_a_row = <a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#aba6933a7ddf4a842f396c499d5b16764">swt::CPPBrainx&lt;std::string&gt;::join</a>(giant_names, <span class="stringliteral">&quot;|&quot;</span>);</div>
+<div class="line">std::string giant_names_in_a_row = swt::CPPBrainx&lt;std::string&gt;::join(giant_names, <span class="stringliteral">&quot;|&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// If you like, use this to print to console</span></div>
-<div class="line"><a class="code hl_function" href="classswt_1_1_common_components.html#a933f262c753da3a577c6890e26a447bf">swt::CPPBrain::print</a>({ giant_names_in_a_row });</div>
-<div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_aba6933a7ddf4a842f396c499d5b16764"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#aba6933a7ddf4a842f396c499d5b16764">swt::CPPBrainx::join</a></div><div class="ttdeci">static std::string join(const std::vector&lt; T &gt; &amp;values, const char *delimiter)</div><div class="ttdoc">Connect elements in a container into a string, and separated by a delimiter string.</div><div class="ttdef"><b>Definition</b> cppbrainx.h:628</div></div>
-<div class="ttc" id="aclassswt_1_1_common_components_html_a933f262c753da3a577c6890e26a447bf"><div class="ttname"><a href="classswt_1_1_common_components.html#a933f262c753da3a577c6890e26a447bf">swt::CommonComponents::print</a></div><div class="ttdeci">static void print(std::initializer_list&lt; std::string &gt; values, const char *delimiter=&quot;, &quot;)</div><div class="ttdoc">Print undetermined count of std::string(s) to console with or without a delimiter.</div><div class="ttdef"><b>Definition</b> common.h:243</div></div>
+<div class="line">swt::CPPBrain::print({ giant_names_in_a_row });</div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
 </div><!-- fragment --> <h1><a class="anchor" id="autotoc_md4"></a>
 Example 4, Container's multi-elements deletion:</h1>
 <p>Use: </p><div class="fragment"><div class="line">std::list&lt;int&gt; list1 = { 2024, 2025, 2026, 2027, 2028 };</div>
 <div class="line"><span class="comment">// Left: 2024, 2026, 2028</span></div>
-<div class="line"><a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#a7f801ed153e89e1325afd7365901f644">swt::CPPBrainx&lt;int&gt;::delete_elements_by_indices</a>(list1, { 1, 3 });</div>
-<div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_a7f801ed153e89e1325afd7365901f644"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#a7f801ed153e89e1325afd7365901f644">swt::CPPBrainx::delete_elements_by_indices</a></div><div class="ttdeci">static std::vector&lt; T &gt; delete_elements_by_indices(std::vector&lt; T &gt; &amp;source, std::vector&lt; size_t &gt; indices, bool is_return_deleted=false)</div><div class="ttdoc">Delete undetermined count of elements from a container by their indices, and optionally return delete...</div><div class="ttdef"><b>Definition</b> cppbrainx.h:198</div></div>
+<div class="line">swt::CPPBrainx&lt;int&gt;::delete_elements_by_indices(list1, { 1, 3 });</div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
 Example 5, Container's multi-elements deletion and memory release:</h1>
@@ -161,46 +153,41 @@ Example 5, Container's multi-elements deletion and memory release:</h1>
 <div class="line"> </div>
 <div class="line">std::list&lt;City*&gt; cool_cities = { <span class="keyword">new</span> Montreal , <span class="keyword">new</span> Guangzhou , <span class="keyword">new</span> Seattle };</div>
 <div class="line"><span class="comment">// This line</span></div>
-<div class="line">std::vector&lt;City*&gt; hot_cities = <a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#a7f801ed153e89e1325afd7365901f644">swt::CPPBrainx&lt;City*&gt;::delete_elements_by_indices</a>(cool_cities, { 1 }, <span class="keyword">true</span>);</div>
+<div class="line">std::vector&lt;City*&gt; hot_cities = swt::CPPBrainx&lt;City*&gt;::delete_elements_by_indices(cool_cities, { 1 }, <span class="keyword">true</span>);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Release: Guangzhou</span></div>
-<div class="line"><a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#a96cd3020068a97c346e1422e593db728">swt::CPPBrainx&lt;City*&gt;::release</a>(hot_cities);</div>
+<div class="line">swt::CPPBrainx&lt;City*&gt;::release(hot_cities);</div>
 <div class="line"><span class="comment">// Release: Montreal, Seattle</span></div>
-<div class="line"><a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#a96cd3020068a97c346e1422e593db728">swt::CPPBrainx&lt;City*&gt;::release</a>(cool_cities);</div>
+<div class="line">swt::CPPBrainx&lt;City*&gt;::release(cool_cities);</div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
 </div><!-- fragment --> <h1><a class="anchor" id="autotoc_md6"></a>
 Example 6, ONE line of array processing, mimic JavaScript's map Function:</h1>
 <p>Use: </p><div class="fragment"><div class="line"><span class="comment">// Input radii of circles and a Lambda function to calculate their areas</span></div>
-<div class="line">std::vector&lt;float&gt; areas = <a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#a63a80f42e9edb6f7821dcd414fda5004">swt::CPPBrainx&lt;float&gt;::map</a>({ 1.0f, 2.0f, 4.0f, 8.0f, 16.0f }, [](<span class="keywordtype">float</span> radius) {</div>
+<div class="line">std::vector&lt;float&gt; areas = swt::CPPBrainx&lt;float&gt;::map({ 1.0f, 2.0f, 4.0f, 8.0f, 16.0f }, [](<span class="keywordtype">float</span> radius) {</div>
 <div class="line">        <span class="comment">// Area formula of Circle</span></div>
 <div class="line">        <span class="keywordflow">return</span> 3.1415926f * radius * radius;</div>
 <div class="line">    });</div>
-<div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_a63a80f42e9edb6f7821dcd414fda5004"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#a63a80f42e9edb6f7821dcd414fda5004">swt::CPPBrainx::map</a></div><div class="ttdeci">static std::vector&lt; T &gt; map(const std::vector&lt; T &gt; &amp;source, T(*map_func)(T))</div><div class="ttdoc">Take in an array of values, process each single data by Lambda function, then return the processed ar...</div><div class="ttdef"><b>Definition</b> cppbrainx.h:391</div></div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
 Example 7, Clamp a value:</h1>
-<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> a_valid_month = <a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#a7ccd074cc52aaef6003c5f8c1ff0c068">swt::CPPBrainx&lt;int&gt;::clamp</a>(15, 1, 12);</div>
-<div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_a7ccd074cc52aaef6003c5f8c1ff0c068"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#a7ccd074cc52aaef6003c5f8c1ff0c068">swt::CPPBrainx::clamp</a></div><div class="ttdeci">static T clamp(const T value, const T range_end1, const T range_end2)</div><div class="ttdoc">Return a new value based on input value, but clamped between the range ends. The order of range ends ...</div><div class="ttdef"><b>Definition</b> cppbrainx.h:541</div></div>
+<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> a_valid_month = swt::CPPBrainx&lt;int&gt;::clamp(15, 1, 12);</div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
 Example 8, Trigger a function based on a value:</h1>
-<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">class </span>Gates { <span class="keyword">public</span>: <span class="keywordtype">void</span> is() { <a class="code hl_function" href="classswt_1_1_common_components.html#a933f262c753da3a577c6890e26a447bf">swt::CPPBrain::print</a>({ <span class="stringliteral">&quot;Co-founder of Microsoft.&quot;</span> }); } };</div>
+<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">class </span>Gates { <span class="keyword">public</span>: <span class="keywordtype">void</span> is() { swt::CPPBrain::print({ <span class="stringliteral">&quot;Co-founder of Microsoft.&quot;</span> }); } };</div>
 <div class="line"><span class="keyword">const</span> Gates* william = <span class="keyword">new</span> Gates;</div>
 <div class="line"><span class="comment">// This line</span></div>
-<div class="line"><a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#ac4cfd12baec744305cf10c77a26fc60b">swt::CPPBrainx&lt;Gates*&gt;::if_true</a>(william, [](Gates* bill) {</div>
+<div class="line">swt::CPPBrainx&lt;Gates*&gt;::if_true(william, [](Gates* bill) {</div>
 <div class="line">        bill-&gt;is();</div>
 <div class="line">    });</div>
-<div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_ac4cfd12baec744305cf10c77a26fc60b"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#ac4cfd12baec744305cf10c77a26fc60b">swt::CPPBrainx::if_true</a></div><div class="ttdeci">static void if_true(const T value, void(*custom_func)(const T value))</div><div class="ttdoc">If input value is true then call input function.</div><div class="ttdef"><b>Definition</b> cppbrainx.h:592</div></div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
 Example 9, Tell a value lies in a range:</h1>
-<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">bool</span> is_21th_century = <a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#afc9e51c07e0b2ed9e03fbedf35d61753">swt::CPPBrainx&lt;int&gt;::in_range_i_e</a>(2024, 2000, 3000);</div>
-<div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_afc9e51c07e0b2ed9e03fbedf35d61753"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#afc9e51c07e0b2ed9e03fbedf35d61753">swt::CPPBrainx::in_range_i_e</a></div><div class="ttdeci">static bool in_range_i_e(const T value, const T range_left, const T range_right)</div><div class="ttdoc">Tell if input value lies between the range_left inclusively and range_right exclusively....</div><div class="ttdef"><b>Definition</b> cppbrainx.h:581</div></div>
+<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">bool</span> is_21th_century = swt::CPPBrainx&lt;int&gt;::in_range_i_e(2024, 2000, 3000);</div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
 Documents</h1>
-<p>Please use the following code to check the Help documents: </p><div class="fragment"><div class="line"><a class="code hl_function" href="classswt_1_1_c_p_p_brain.html#a99ff58f111f46fdbc35607e3af23137e">swt::CPPBrain::help</a>();</div>
-<div class="ttc" id="aclassswt_1_1_c_p_p_brain_html_a99ff58f111f46fdbc35607e3af23137e"><div class="ttname"><a href="classswt_1_1_c_p_p_brain.html#a99ff58f111f46fdbc35607e3af23137e">swt::CPPBrain::help</a></div><div class="ttdeci">static void help()</div><div class="ttdoc">Print Help information of module 'swt::CPPBrain' to console.</div><div class="ttdef"><b>Definition</b> cppbrain.h:42</div></div>
+<p>Please use the following code to check the Help documents: </p><div class="fragment"><div class="line">swt::CPPBrain::help();</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md11"></a>
 More examples, more APIs</h1>
 <p>Please check: <a href="https://github.com/davychxn/CPP-BRAIN/blob/main/examples/Examples.cpp">examples\Examples.cpp</a></p>

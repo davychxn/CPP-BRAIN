@@ -20,16 +20,16 @@ namespace swt
 {
     /**
      * CPP-BRAIN helps you enjoy C++ coding a bit more :)
-     * CPP-BRAIN library consists modules of 'swt::CPPBrain', 'swt::CPPBrainx' and 'swt::CPPBrainxx'
+     * CPP-BRAIN library consists modules of 'swt::brain', 'swt::brainx' and 'swt::brainxx'
      * - Created by Davy Chen
      * - Since August 8th, 2020
      * - In the hot weather of Guangzhou
      */
-    class CPPBrain: public CommonComponents
+    class brain: public CommonComponents
     {
     public:
         /**
-         * @brief Print Help information of module 'swt::CPPBrain' to console.
+         * @brief Print Help information of module 'swt::brain' to console.
          */
         static void help();
         /**
@@ -39,12 +39,12 @@ namespace swt
         
     };
 
-    void CPPBrain::help()
+    void brain::help()
     {
         DataManager::help_();
     }
 
-    void CPPBrain::version()
+    void brain::version()
     {
         DataManager::version();
     }
