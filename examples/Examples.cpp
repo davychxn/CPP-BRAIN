@@ -245,7 +245,7 @@ int main()
     swt::brain::print({ "-Example of 'clamp': (EGX-005-001)" });
 
     // *** This line *** //
-    float clamped = swt::brainx<float>::clamp((float)2025.1224, (float)2024.0214, (float)2024.0501);
+    float clamped = swt::brainx<float>::clamp(2025.1224f, 2024.0214f, 2024.0501f);
     swt::brainx<float>::print({ clamped });
 
     swt::brain::print_return();
