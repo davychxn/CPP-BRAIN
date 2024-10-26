@@ -209,22 +209,22 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>in_range_e_i</
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>in_range_i_e</b> (const T value, const T range_left, const T range_right)</td></tr>
 <tr class="memdesc:afc9e51c07e0b2ed9e03fbedf35d61753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell if input value lies between the range_left inclusively and range_right exclusively. range_left must not be greater than range_right. <br /></td></tr>
 <tr class="separator:afc9e51c07e0b2ed9e03fbedf35d61753"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe8750ed20adac6e8b68fd852c83f709" id="r_afe8750ed20adac6e8b68fd852c83f709"><td class="memItemLeft" align="right" valign="top"><a id="afe8750ed20adac6e8b68fd852c83f709" name="afe8750ed20adac6e8b68fd852c83f709"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>if_true</b> (const T value, void(*custom_func)(T value))</td></tr>
-<tr class="memdesc:afe8750ed20adac6e8b68fd852c83f709"><td class="mdescLeft">&#160;</td><td class="mdescRight">If input value is true then call input function. <br /></td></tr>
-<tr class="separator:afe8750ed20adac6e8b68fd852c83f709"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a681338b6f6d255292506c37ecbb18a25" id="r_a681338b6f6d255292506c37ecbb18a25"><td class="memItemLeft" align="right" valign="top"><a id="a681338b6f6d255292506c37ecbb18a25" name="a681338b6f6d255292506c37ecbb18a25"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>if_false</b> (const T value, void(*custom_func)(T value))</td></tr>
-<tr class="memdesc:a681338b6f6d255292506c37ecbb18a25"><td class="mdescLeft">&#160;</td><td class="mdescRight">If input value is false then call input function. <br /></td></tr>
-<tr class="separator:a681338b6f6d255292506c37ecbb18a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbe83c052cc0fea1b7ace91771e9a155" id="r_adbe83c052cc0fea1b7ace91771e9a155"><td class="memItemLeft" align="right" valign="top"><a id="adbe83c052cc0fea1b7ace91771e9a155" name="adbe83c052cc0fea1b7ace91771e9a155"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>if_null</b> (const T value, void(*custom_func)(T value))</td></tr>
-<tr class="memdesc:adbe83c052cc0fea1b7ace91771e9a155"><td class="mdescLeft">&#160;</td><td class="mdescRight">If input value is null then call input function. <br /></td></tr>
-<tr class="separator:adbe83c052cc0fea1b7ace91771e9a155"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26283e7269da78eae6387d8545a06d1a" id="r_a26283e7269da78eae6387d8545a06d1a"><td class="memItemLeft" align="right" valign="top"><a id="a26283e7269da78eae6387d8545a06d1a" name="a26283e7269da78eae6387d8545a06d1a"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>if_nullptr</b> (const T value, void(*custom_func)(T value))</td></tr>
-<tr class="memdesc:a26283e7269da78eae6387d8545a06d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If input value is nullptr then call input function. <br /></td></tr>
-<tr class="separator:a26283e7269da78eae6387d8545a06d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4cfd12baec744305cf10c77a26fc60b" id="r_ac4cfd12baec744305cf10c77a26fc60b"><td class="memItemLeft" align="right" valign="top"><a id="ac4cfd12baec744305cf10c77a26fc60b" name="ac4cfd12baec744305cf10c77a26fc60b"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>if_true</b> (const T value, void(*custom_func)(const T value))</td></tr>
+<tr class="memdesc:ac4cfd12baec744305cf10c77a26fc60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">If input value is true then call input function. <br /></td></tr>
+<tr class="separator:ac4cfd12baec744305cf10c77a26fc60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af94d235ed98f57746733b41f67fbb033" id="r_af94d235ed98f57746733b41f67fbb033"><td class="memItemLeft" align="right" valign="top"><a id="af94d235ed98f57746733b41f67fbb033" name="af94d235ed98f57746733b41f67fbb033"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>if_false</b> (const T value, void(*custom_func)(const T value))</td></tr>
+<tr class="memdesc:af94d235ed98f57746733b41f67fbb033"><td class="mdescLeft">&#160;</td><td class="mdescRight">If input value is false then call input function. <br /></td></tr>
+<tr class="separator:af94d235ed98f57746733b41f67fbb033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63549b532a31a823bc8cdb0e76897a87" id="r_a63549b532a31a823bc8cdb0e76897a87"><td class="memItemLeft" align="right" valign="top"><a id="a63549b532a31a823bc8cdb0e76897a87" name="a63549b532a31a823bc8cdb0e76897a87"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>if_null</b> (const T value, void(*custom_func)(const T value))</td></tr>
+<tr class="memdesc:a63549b532a31a823bc8cdb0e76897a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">If input value is null then call input function. <br /></td></tr>
+<tr class="separator:a63549b532a31a823bc8cdb0e76897a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1cebb4fb3e6d5de6ced55d467e032a" id="r_a2f1cebb4fb3e6d5de6ced55d467e032a"><td class="memItemLeft" align="right" valign="top"><a id="a2f1cebb4fb3e6d5de6ced55d467e032a" name="a2f1cebb4fb3e6d5de6ced55d467e032a"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>if_nullptr</b> (const T value, void(*custom_func)(const T value))</td></tr>
+<tr class="memdesc:a2f1cebb4fb3e6d5de6ced55d467e032a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If input value is nullptr then call input function. <br /></td></tr>
+<tr class="separator:a2f1cebb4fb3e6d5de6ced55d467e032a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a965e8c875731e894976c0faeef01715b" id="r_a965e8c875731e894976c0faeef01715b"><td class="memItemLeft" align="right" valign="top"><a id="a965e8c875731e894976c0faeef01715b" name="a965e8c875731e894976c0faeef01715b"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (const std::vector&lt; T &gt; &amp;values, const char *delimiter=&quot;, &quot;)</td></tr>
 <tr class="memdesc:a965e8c875731e894976c0faeef01715b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print undetermined count of values or elements in a container to console with or without a delimiter. <br /></td></tr>

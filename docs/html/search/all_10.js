@@ -1,13 +1,12 @@
 var searchData=
 [
-  ['life_20longer_0',['CPP-BRAIN: Convenient C++ APIs to make your life longer',['../index.html',1,'']]],
-  ['line_20of_20array_20processing_20mimic_20javascript_20s_20map_20function_3a_1',['Example 6, ONE line of array processing, mimic JavaScript&apos;s map Function:',['../index.html#autotoc_md6',1,'']]],
-  ['line_20of_20pointer_20release_3a_2',['Example 1, ONE line of pointer release:',['../index.html#autotoc_md1',1,'']]],
-  ['line_20of_20string_20splitting_20and_20joining_3a_3',['Example 3, ONE line of string splitting and joining:',['../index.html#autotoc_md3',1,'']]],
-  ['longer_4',['CPP-BRAIN: Convenient C++ APIs to make your life longer',['../index.html',1,'']]],
-  ['loop_5',['loop',['../classswt_1_1_common_components.html#a1869e7db51d241a0cac8cf5ae74f1bee',1,'swt::CommonComponents']]],
-  ['loop_20condition_20mimic_20python_20s_20range_3a_6',['Example 2, Simplified loop condition, mimic Python&apos;s range:',['../index.html#autotoc_md2',1,'']]],
-  ['loop_5findex_7',['loop_index',['../classswt_1_1_common_components.html#a9af35aaec94bbde8260ec246bad56847',1,'swt::CommonComponents']]],
-  ['loop_5fto_8',['loop_to',['../classswt_1_1_common_components.html#a79f51727e2b268409bb7ffa68aa293cd',1,'swt::CommonComponents']]],
-  ['loop_5fto_5fby_9',['loop_to_by',['../classswt_1_1_common_components.html#a20f51f97cfec3812037ed0030f7bb60e',1,'swt::CommonComponents']]]
+  ['if_5ffalse_0',['if_false',['../classswt_1_1_c_p_p_brainx.html#af94d235ed98f57746733b41f67fbb033',1,'swt::CPPBrainx::if_false()'],['../classswt_1_1_c_p_p_brainxx.html#a2e4bbfb9218a79eeca4557c5037efc93',1,'swt::CPPBrainxx::if_false()']]],
+  ['if_5fnull_1',['if_null',['../classswt_1_1_c_p_p_brainx.html#a63549b532a31a823bc8cdb0e76897a87',1,'swt::CPPBrainx::if_null()'],['../classswt_1_1_c_p_p_brainxx.html#ae70e29af88958ebf76539f89753bcb4d',1,'swt::CPPBrainxx::if_null()']]],
+  ['if_5fnullptr_2',['if_nullptr',['../classswt_1_1_c_p_p_brainx.html#a2f1cebb4fb3e6d5de6ced55d467e032a',1,'swt::CPPBrainx::if_nullptr()'],['../classswt_1_1_c_p_p_brainxx.html#a66b2e6b8993cd5d6050802c5a0236c93',1,'swt::CPPBrainxx::if_nullptr()']]],
+  ['if_5ftrue_3',['if_true',['../classswt_1_1_c_p_p_brainx.html#ac4cfd12baec744305cf10c77a26fc60b',1,'swt::CPPBrainx::if_true()'],['../classswt_1_1_c_p_p_brainxx.html#ab9853eb43e387f04901ce1ea94eb69d5',1,'swt::CPPBrainxx::if_true()']]],
+  ['in_20a_20range_3a_4',['Example 9, Tell a value lies in a range:',['../index.html#autotoc_md9',1,'']]],
+  ['in_5frange_5fe_5',['in_range_e',['../classswt_1_1_c_p_p_brainx.html#a7e0bc4421d98698afd0004c593db3da9',1,'swt::CPPBrainx']]],
+  ['in_5frange_5fe_5fi_6',['in_range_e_i',['../classswt_1_1_c_p_p_brainx.html#a25e07009323a369dcd5abfc2df3efef9',1,'swt::CPPBrainx']]],
+  ['in_5frange_5fi_7',['in_range_i',['../classswt_1_1_c_p_p_brainx.html#a3fda82494958c5412b17508093034ae5',1,'swt::CPPBrainx']]],
+  ['in_5frange_5fi_5fe_8',['in_range_i_e',['../classswt_1_1_c_p_p_brainx.html#afc9e51c07e0b2ed9e03fbedf35d61753',1,'swt::CPPBrainx']]]
 ];

@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['datamanager_0',['DataManager',['../classswt_1_1_data_manager.html',1,'swt']]],
-  ['delete_5felements_1',['delete_elements',['../classswt_1_1_c_p_p_brainx.html#a6d0681f77fc41702f1cd18bd11764546',1,'swt::CPPBrainx::delete_elements()'],['../classswt_1_1_c_p_p_brainxx.html#aff6c3b41d29c8d5531bca3493f266ae2',1,'swt::CPPBrainxx::delete_elements()']]],
-  ['delete_5felements_5fby_5findices_2',['delete_elements_by_indices',['../classswt_1_1_c_p_p_brainx.html#a7f801ed153e89e1325afd7365901f644',1,'swt::CPPBrainx::delete_elements_by_indices()'],['../classswt_1_1_c_p_p_brainxx.html#a2caeda69ec349609ce5d5577621b602e',1,'swt::CPPBrainxx::delete_elements_by_indices()']]],
-  ['deletion_20and_20memory_20release_3a_3',['Example 5, Container&apos;s multi-elements deletion and memory release:',['../index.html#autotoc_md5',1,'']]],
-  ['deletion_3a_4',['Example 4, Container&apos;s multi-elements deletion:',['../index.html#autotoc_md4',1,'']]],
-  ['documents_5',['Documents',['../index.html#autotoc_md7',1,'']]]
+  ['a_20function_20based_20on_20a_20value_3a_0',['Example 8, Trigger a function based on a value:',['../index.html#autotoc_md8',1,'']]],
+  ['a_20range_3a_1',['Example 9, Tell a value lies in a range:',['../index.html#autotoc_md9',1,'']]],
+  ['a_20value_20lies_20in_20a_20range_3a_2',['Example 9, Tell a value lies in a range:',['../index.html#autotoc_md9',1,'']]],
+  ['a_20value_3a_3',['a value:',['../index.html#autotoc_md7',1,'Example 7, Clamp a value:'],['../index.html#autotoc_md8',1,'Example 8, Trigger a function based on a value:']]],
+  ['and_20joining_3a_4',['Example 3, ONE line of string splitting and joining:',['../index.html#autotoc_md3',1,'']]],
+  ['and_20memory_20release_3a_5',['Example 5, Container&apos;s multi-elements deletion and memory release:',['../index.html#autotoc_md5',1,'']]],
+  ['apis_6',['More examples, more APIs',['../index.html#autotoc_md11',1,'']]],
+  ['apis_20to_20make_20your_20life_20longer_7',['CPP-BRAIN: Convenient C++ APIs to make your life longer',['../index.html',1,'']]],
+  ['array_20processing_20mimic_20javascript_20s_20map_20function_3a_8',['Example 6, ONE line of array processing, mimic JavaScript&apos;s map Function:',['../index.html#autotoc_md6',1,'']]]
 ];

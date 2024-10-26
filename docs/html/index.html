@@ -178,17 +178,33 @@ Example 6, ONE line of array processing, mimic JavaScript's map Function:</h1>
 <div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_a63a80f42e9edb6f7821dcd414fda5004"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#a63a80f42e9edb6f7821dcd414fda5004">swt::CPPBrainx::map</a></div><div class="ttdeci">static std::vector&lt; T &gt; map(const std::vector&lt; T &gt; &amp;source, T(*map_func)(T))</div><div class="ttdoc">Take in an array of values, process each single data by Lambda function, then return the processed ar...</div><div class="ttdef"><b>Definition</b> cppbrainx.h:391</div></div>
 </div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+Example 7, Clamp a value:</h1>
+<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> a_valid_month = <a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#a7ccd074cc52aaef6003c5f8c1ff0c068">swt::CPPBrainx&lt;int&gt;::clamp</a>(15, 1, 12);</div>
+<div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_a7ccd074cc52aaef6003c5f8c1ff0c068"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#a7ccd074cc52aaef6003c5f8c1ff0c068">swt::CPPBrainx::clamp</a></div><div class="ttdeci">static T clamp(const T value, const T range_end1, const T range_end2)</div><div class="ttdoc">Return a new value based on input value, but clamped between the range ends. The order of range ends ...</div><div class="ttdef"><b>Definition</b> cppbrainx.h:541</div></div>
+</div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+Example 8, Trigger a function based on a value:</h1>
+<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">class </span>Gates { <span class="keyword">public</span>: <span class="keywordtype">void</span> is() { <a class="code hl_function" href="classswt_1_1_common_components.html#a933f262c753da3a577c6890e26a447bf">swt::CPPBrain::print</a>({ <span class="stringliteral">&quot;Co-founder of Microsoft.&quot;</span> }); } };</div>
+<div class="line"><span class="keyword">const</span> Gates* william = <span class="keyword">new</span> Gates;</div>
+<div class="line"><span class="comment">// This line</span></div>
+<div class="line"><a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#ac4cfd12baec744305cf10c77a26fc60b">swt::CPPBrainx&lt;Gates*&gt;::if_true</a>(william, [](Gates* bill) {</div>
+<div class="line">        bill-&gt;is();</div>
+<div class="line">    });</div>
+<div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_ac4cfd12baec744305cf10c77a26fc60b"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#ac4cfd12baec744305cf10c77a26fc60b">swt::CPPBrainx::if_true</a></div><div class="ttdeci">static void if_true(const T value, void(*custom_func)(const T value))</div><div class="ttdoc">If input value is true then call input function.</div><div class="ttdef"><b>Definition</b> cppbrainx.h:592</div></div>
+</div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
+Example 9, Tell a value lies in a range:</h1>
+<p>Use: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">bool</span> is_21th_century = <a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#afc9e51c07e0b2ed9e03fbedf35d61753">swt::CPPBrainx&lt;int&gt;::in_range_i_e</a>(2024, 2000, 3000);</div>
+<div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_afc9e51c07e0b2ed9e03fbedf35d61753"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#afc9e51c07e0b2ed9e03fbedf35d61753">swt::CPPBrainx::in_range_i_e</a></div><div class="ttdeci">static bool in_range_i_e(const T value, const T range_left, const T range_right)</div><div class="ttdoc">Tell if input value lies between the range_left inclusively and range_right exclusively....</div><div class="ttdef"><b>Definition</b> cppbrainx.h:581</div></div>
+</div><!-- fragment --><p> Instead of: </p><div class="fragment"><div class="line"><span class="comment">// You can imagine</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
 Documents</h1>
 <p>Please use the following code to check the Help documents: </p><div class="fragment"><div class="line"><a class="code hl_function" href="classswt_1_1_c_p_p_brain.html#a99ff58f111f46fdbc35607e3af23137e">swt::CPPBrain::help</a>();</div>
-<div class="line"><a class="code hl_function" href="classswt_1_1_c_p_p_brainx.html#add8b79bcbc32a53c13b19866d558c76e">swt::CPPBrainx&lt;int&gt;::help</a>();</div>
-<div class="line"><a class="code hl_function" href="classswt_1_1_c_p_p_brainxx.html#a23f7a7609eb715f75d84590e54206128">swt::CPPBrainxx&lt;int, int&gt;::help</a>();</div>
 <div class="ttc" id="aclassswt_1_1_c_p_p_brain_html_a99ff58f111f46fdbc35607e3af23137e"><div class="ttname"><a href="classswt_1_1_c_p_p_brain.html#a99ff58f111f46fdbc35607e3af23137e">swt::CPPBrain::help</a></div><div class="ttdeci">static void help()</div><div class="ttdoc">Print Help information of module 'swt::CPPBrain' to console.</div><div class="ttdef"><b>Definition</b> cppbrain.h:42</div></div>
-<div class="ttc" id="aclassswt_1_1_c_p_p_brainx_html_add8b79bcbc32a53c13b19866d558c76e"><div class="ttname"><a href="classswt_1_1_c_p_p_brainx.html#add8b79bcbc32a53c13b19866d558c76e">swt::CPPBrainx::help</a></div><div class="ttdeci">static void help()</div><div class="ttdoc">Print Help information of module 'swt::CPPBrainx' to console.</div><div class="ttdef"><b>Definition</b> cppbrainx.h:830</div></div>
-<div class="ttc" id="aclassswt_1_1_c_p_p_brainxx_html_a23f7a7609eb715f75d84590e54206128"><div class="ttname"><a href="classswt_1_1_c_p_p_brainxx.html#a23f7a7609eb715f75d84590e54206128">swt::CPPBrainxx::help</a></div><div class="ttdeci">static void help()</div><div class="ttdoc">Print Help information of module 'swt::CPPBrainxx' to console.</div><div class="ttdef"><b>Definition</b> cppbrainxx.h:195</div></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md11"></a>
 More examples, more APIs</h1>
 <p>Please check: <a href="https://github.com/davychxn/CPP-BRAIN/blob/main/examples/Examples.cpp">examples\Examples.cpp</a></p>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md12"></a>
 Tested</h1>
 <div class="fragment"><div class="line">1. Windows 11 &amp; Visual Studio C++ 2022</div>
 <div class="line">2. Windows 11 &amp; Visual Studio C++ 2019 &amp; Qt 5.15.2</div>
