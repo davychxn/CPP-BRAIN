@@ -2,12 +2,33 @@
 
 CPP-BRAIN C++ library consists of modules of `swt::brain`, `swt::brainx` and `swt::brainxx`
 
--Created by Davy Chen, Since August 8th, 2020, In the hot weather of Guangzhou
+-Created by Davy Chen Since August 8th, 2020 In the hot weather of Guangzhou
+
+## Hello world
+```cpp
+#include "./CPP-BRAIN/cppbrain.h"
+
+swt::brain::print({ "Hello world." });
+```
+- No lib linking required.
+
+## Guidance for C++ starters
+- You don't need to link any lib to your project to use CPP-BRAIN. The C++ code in the library is very lightweight, written inside header files. Include the `cppbrain.h`, you are good to compile and run.
+
+- CPP-BRAIN uses Templates. C++ Templates are employed only to save developer's time of writing repeated code, nothing beyond that. Here is a decent tutorial to start with: https://www.geeksforgeeks.org/templates-cpp/
+ 
+- `class brain` is designed for functions without any template variable as their argument, `class brainx` is for functions with only 1 template variable, `class brainxx` is for those with 2 template variables. Don't be afraid of it, try it.
+
+- The arguments surrounded by braces in examples are of undetermined count. You can use any number of them, just separate those with a ",". 
+
+## Help documents
+Please reference the following link:
+[docs](https://davychxn.github.io/CPP-BRAIN-docs/)
 
 ## Example 1, ONE line of pointer release:
 Use:
 ```cpp
-#include "CPP-BRAIN/cppbrain.h"
+#include "./CPP-BRAIN/cppbrain.h"
 
 Shanghai* city1 = new Shanghai;
 // This line
@@ -166,12 +187,6 @@ const bool is_21th_century = swt::brainx<int>::in_range_i_e(test_year, 2000, 300
 Instead of:
 ```cpp
 // You can imagine
-```
-
-## Documents
-Please use the following code to check the Help documents:
-```cpp
-swt::brain::help();
 ```
 
 ## More examples, more APIs

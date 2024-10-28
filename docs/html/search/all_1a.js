@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['value_20lies_20in_20a_20range_3a_0',['Example 9, Tell if a value lies in a range:',['../index.html#autotoc_md9',1,'']]],
-  ['value_3a_1',['value:',['../index.html#autotoc_md7',1,'Example 7, Clamp a value:'],['../index.html#autotoc_md8',1,'Example 8, Trigger a function based on a value:']]],
-  ['values_2',['values',['../classswt_1_1brainxx.html#ada3a2ea0a3c45d86933046a715e64130',1,'swt::brainxx']]],
-  ['version_3',['version',['../classswt_1_1brain.html#afd1d753b1234521af548a54a0fb337e1',1,'swt::brain::version()'],['../classswt_1_1brainx.html#a65a8774d1aee5e3c56b69f8ee59f20e2',1,'swt::brainx::version()'],['../classswt_1_1brainxx.html#a808bb761c0ff6af9077a485cfa177777',1,'swt::brainxx::version()']]]
+  ['tell_20if_20a_20value_20lies_20in_20a_20range_3a_0',['Example 9, Tell if a value lies in a range:',['../index.html#autotoc_md11',1,'']]],
+  ['tested_1',['Tested',['../index.html#autotoc_md14',1,'']]],
+  ['to_20make_20your_20life_20longer_2',['CPP-BRAIN: Convenient C++ APIs to make your life longer',['../index.html',1,'']]],
+  ['to_5fstring_3',['to_string',['../classswt_1_1brainx.html#a9b7631ba102a7184884a819449022fbd',1,'swt::brainx']]],
+  ['to_5ftype_4',['to_type',['../classswt_1_1brainx.html#aabf19aaafe70c0b46a5696b3c7874414',1,'swt::brainx']]],
+  ['to_5fvector_5',['to_vector',['../classswt_1_1brainx.html#aa43239d224c49efda6e76d7b9d3a52bb',1,'swt::brainx']]],
+  ['trigger_20a_20function_20based_20on_20a_20value_3a_6',['Example 8, Trigger a function based on a value:',['../index.html#autotoc_md10',1,'']]]
 ];
